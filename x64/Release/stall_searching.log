@@ -1,0 +1,48 @@
+﻿  stall_searching.cpp
+C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\stall_searching.cpp(16,42): warning C4244: 'initializing': conversion from 'double' to 'unsigned __int64', possible loss of data
+C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\stall_searching.cpp(129,19): warning C4018: '<=': signed/unsigned mismatch
+C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\stall_searching.cpp(132,24): warning C4018: '>': signed/unsigned mismatch
+C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\stall_searching.cpp(140,19): warning C4018: '<=': signed/unsigned mismatch
+C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\stall_searching.cpp(143,24): warning C4018: '>': signed/unsigned mismatch
+C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\stall_searching.cpp(151,19): warning C4018: '<=': signed/unsigned mismatch
+C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\stall_searching.cpp(154,24): warning C4018: '>': signed/unsigned mismatch
+C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\stall_searching.cpp(167,28): warning C4244: 'initializing': conversion from '__int64' to 'unsigned int', possible loss of data
+C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\stall_searching.cpp(201,102): warning C4244: '=': conversion from '__int64' to 'unsigned int', possible loss of data
+C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\stall_searching.cpp(267,32): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\stall_searching.cpp(303,43): warning C4267: '=': conversion from 'size_t' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=unsigned int
+          ]
+C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\stall_searching.cpp(294,9): warning C4101: 'index': unreferenced local variable
+C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\stall_searching.cpp(333,25): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\stall_searching.cpp(360,35): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\stall_searching.cpp(372,49): warning C4267: '=': conversion from 'size_t' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\stall_searching.cpp(378,47): warning C4267: '=': conversion from 'size_t' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\stall_searching.cpp(352,9): warning C4101: 'index': unreferenced local variable
+C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\stall_searching.cpp(414,18): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\stall_searching.cpp(432,23): warning C4018: '<=': signed/unsigned mismatch
+C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\stall_searching.cpp(444,48): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\stall_searching.cpp(467,28): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\stall_searching.cpp(417,9): warning C4101: 'index': unreferenced local variable
+C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\stall_searching.cpp(488,12): warning C4477: 'printf' : format string '%u' requires an argument of type 'unsigned int', but variadic argument 1 has type 'unsigned __int64'
+C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\stall_searching.cpp(488,12): message : consider using '%zu' in the format string
+C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\stall_searching.cpp(505,12): warning C4477: 'printf' : format string '%u' requires an argument of type 'unsigned int', but variadic argument 1 has type 'unsigned __int64'
+C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\stall_searching.cpp(505,12): message : consider using '%zu' in the format string
+C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\stall_searching.cpp(523,34): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\stall_searching.cpp(536,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\stall_searching.cpp(537,31): warning C4018: '<': signed/unsigned mismatch
+  Generating code
+  0 of 984 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  stall_searching.vcxproj -> C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\x64\Release\stall_searching.exe

@@ -1,0 +1,1167 @@
+﻿<?xml version="1.0" encoding="utf-8"?><DEFECTS><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>40</LINE>
+      <COLUMN>32</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>find_nb</FUNCTION>
+    <DECORATED>?find_nb@@YA?AV?$Col@_K@arma@@IV12@@Z</DECORATED>
+    <FUNCLINE>32</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>40</LINE>
+      <COLUMN>43</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>find_nb</FUNCTION>
+    <DECORATED>?find_nb@@YA?AV?$Col@_K@arma@@IV12@@Z</DECORATED>
+    <FUNCLINE>32</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>43</LINE>
+      <COLUMN>32</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>find_nb</FUNCTION>
+    <DECORATED>?find_nb@@YA?AV?$Col@_K@arma@@IV12@@Z</DECORATED>
+    <FUNCLINE>32</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>43</LINE>
+      <COLUMN>43</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>find_nb</FUNCTION>
+    <DECORATED>?find_nb@@YA?AV?$Col@_K@arma@@IV12@@Z</DECORATED>
+    <FUNCLINE>32</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>46</LINE>
+      <COLUMN>32</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>find_nb</FUNCTION>
+    <DECORATED>?find_nb@@YA?AV?$Col@_K@arma@@IV12@@Z</DECORATED>
+    <FUNCLINE>32</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>46</LINE>
+      <COLUMN>43</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>find_nb</FUNCTION>
+    <DECORATED>?find_nb@@YA?AV?$Col@_K@arma@@IV12@@Z</DECORATED>
+    <FUNCLINE>32</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>46</LINE>
+      <COLUMN>54</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>find_nb</FUNCTION>
+    <DECORATED>?find_nb@@YA?AV?$Col@_K@arma@@IV12@@Z</DECORATED>
+    <FUNCLINE>32</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>62</LINE>
+      <COLUMN>43</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>find_nb</FUNCTION>
+    <DECORATED>?find_nb@@YA?AV?$Col@_K@arma@@IV12@@Z</DECORATED>
+    <FUNCLINE>32</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>62</LINE>
+      <COLUMN>54</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>find_nb</FUNCTION>
+    <DECORATED>?find_nb@@YA?AV?$Col@_K@arma@@IV12@@Z</DECORATED>
+    <FUNCLINE>32</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>65</LINE>
+      <COLUMN>43</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>find_nb</FUNCTION>
+    <DECORATED>?find_nb@@YA?AV?$Col@_K@arma@@IV12@@Z</DECORATED>
+    <FUNCLINE>32</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>65</LINE>
+      <COLUMN>54</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>find_nb</FUNCTION>
+    <DECORATED>?find_nb@@YA?AV?$Col@_K@arma@@IV12@@Z</DECORATED>
+    <FUNCLINE>32</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>68</LINE>
+      <COLUMN>43</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>find_nb</FUNCTION>
+    <DECORATED>?find_nb@@YA?AV?$Col@_K@arma@@IV12@@Z</DECORATED>
+    <FUNCLINE>32</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>68</LINE>
+      <COLUMN>54</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>find_nb</FUNCTION>
+    <DECORATED>?find_nb@@YA?AV?$Col@_K@arma@@IV12@@Z</DECORATED>
+    <FUNCLINE>32</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>68</LINE>
+      <COLUMN>65</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>find_nb</FUNCTION>
+    <DECORATED>?find_nb@@YA?AV?$Col@_K@arma@@IV12@@Z</DECORATED>
+    <FUNCLINE>32</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>51</LINE>
+      <COLUMN>43</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>find_nb</FUNCTION>
+    <DECORATED>?find_nb@@YA?AV?$Col@_K@arma@@IV12@@Z</DECORATED>
+    <FUNCLINE>32</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>54</LINE>
+      <COLUMN>43</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>find_nb</FUNCTION>
+    <DECORATED>?find_nb@@YA?AV?$Col@_K@arma@@IV12@@Z</DECORATED>
+    <FUNCLINE>32</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>57</LINE>
+      <COLUMN>43</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>find_nb</FUNCTION>
+    <DECORATED>?find_nb@@YA?AV?$Col@_K@arma@@IV12@@Z</DECORATED>
+    <FUNCLINE>32</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>57</LINE>
+      <COLUMN>54</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>find_nb</FUNCTION>
+    <DECORATED>?find_nb@@YA?AV?$Col@_K@arma@@IV12@@Z</DECORATED>
+    <FUNCLINE>32</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>78</LINE>
+      <COLUMN>16</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>find_hats</FUNCTION>
+    <DECORATED>?find_hats@@YA?AV?$Col@_K@arma@@IV12@@Z</DECORATED>
+    <FUNCLINE>75</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>99</LINE>
+      <COLUMN>16</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>find_hats_grid</FUNCTION>
+    <DECORATED>?find_hats_grid@@YA?AV?$Col@_K@arma@@V12@@Z</DECORATED>
+    <FUNCLINE>95</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>176</LINE>
+      <COLUMN>28</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>find_combn</FUNCTION>
+    <DECORATED>?find_combn@@YA?AV?$vector@V?$Col@_K@arma@@V?$allocator@V?$Col@_K@arma@@@std@@@std@@HH@Z</DECORATED>
+    <FUNCLINE>163</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>212</LINE>
+      <COLUMN>44</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>check_config_rev</FUNCTION>
+    <DECORATED>?check_config_rev@@YA?AV?$vector@V?$Col@_K@arma@@V?$allocator@V?$Col@_K@arma@@@std@@@std@@V?$Col@_K@arma@@00@Z</DECORATED>
+    <FUNCLINE>201</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>215</LINE>
+      <COLUMN>22</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>check_config_rev</FUNCTION>
+    <DECORATED>?check_config_rev@@YA?AV?$vector@V?$Col@_K@arma@@V?$allocator@V?$Col@_K@arma@@@std@@@std@@V?$Col@_K@arma@@00@Z</DECORATED>
+    <FUNCLINE>201</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>221</LINE>
+      <COLUMN>18</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>check_config_rev</FUNCTION>
+    <DECORATED>?check_config_rev@@YA?AV?$vector@V?$Col@_K@arma@@V?$allocator@V?$Col@_K@arma@@@std@@@std@@V?$Col@_K@arma@@00@Z</DECORATED>
+    <FUNCLINE>201</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>222</LINE>
+      <COLUMN>18</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>check_config_rev</FUNCTION>
+    <DECORATED>?check_config_rev@@YA?AV?$vector@V?$Col@_K@arma@@V?$allocator@V?$Col@_K@arma@@@std@@@std@@V?$Col@_K@arma@@00@Z</DECORATED>
+    <FUNCLINE>201</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>224</LINE>
+      <COLUMN>22</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>check_config_rev</FUNCTION>
+    <DECORATED>?check_config_rev@@YA?AV?$vector@V?$Col@_K@arma@@V?$allocator@V?$Col@_K@arma@@@std@@@std@@V?$Col@_K@arma@@00@Z</DECORATED>
+    <FUNCLINE>201</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>227</LINE>
+      <COLUMN>22</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>check_config_rev</FUNCTION>
+    <DECORATED>?check_config_rev@@YA?AV?$vector@V?$Col@_K@arma@@V?$allocator@V?$Col@_K@arma@@@std@@@std@@V?$Col@_K@arma@@00@Z</DECORATED>
+    <FUNCLINE>201</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>227</LINE>
+      <COLUMN>39</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>check_config_rev</FUNCTION>
+    <DECORATED>?check_config_rev@@YA?AV?$vector@V?$Col@_K@arma@@V?$allocator@V?$Col@_K@arma@@@std@@@std@@V?$Col@_K@arma@@00@Z</DECORATED>
+    <FUNCLINE>201</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>227</LINE>
+      <COLUMN>56</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>check_config_rev</FUNCTION>
+    <DECORATED>?check_config_rev@@YA?AV?$vector@V?$Col@_K@arma@@V?$allocator@V?$Col@_K@arma@@@std@@@std@@V?$Col@_K@arma@@00@Z</DECORATED>
+    <FUNCLINE>201</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>270</LINE>
+      <COLUMN>44</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>check_config</FUNCTION>
+    <DECORATED>?check_config@@YA?AV?$vector@V?$Col@_K@arma@@V?$allocator@V?$Col@_K@arma@@@std@@@std@@V?$Col@_K@arma@@00@Z</DECORATED>
+    <FUNCLINE>259</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>273</LINE>
+      <COLUMN>22</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>check_config</FUNCTION>
+    <DECORATED>?check_config@@YA?AV?$vector@V?$Col@_K@arma@@V?$allocator@V?$Col@_K@arma@@@std@@@std@@V?$Col@_K@arma@@00@Z</DECORATED>
+    <FUNCLINE>259</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>282</LINE>
+      <COLUMN>22</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>check_config</FUNCTION>
+    <DECORATED>?check_config@@YA?AV?$vector@V?$Col@_K@arma@@V?$allocator@V?$Col@_K@arma@@@std@@@std@@V?$Col@_K@arma@@00@Z</DECORATED>
+    <FUNCLINE>259</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>297</LINE>
+      <COLUMN>22</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>check_config</FUNCTION>
+    <DECORATED>?check_config@@YA?AV?$vector@V?$Col@_K@arma@@V?$allocator@V?$Col@_K@arma@@@std@@@std@@V?$Col@_K@arma@@00@Z</DECORATED>
+    <FUNCLINE>259</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>298</LINE>
+      <COLUMN>22</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>check_config</FUNCTION>
+    <DECORATED>?check_config@@YA?AV?$vector@V?$Col@_K@arma@@V?$allocator@V?$Col@_K@arma@@@std@@@std@@V?$Col@_K@arma@@00@Z</DECORATED>
+    <FUNCLINE>259</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>301</LINE>
+      <COLUMN>22</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>check_config</FUNCTION>
+    <DECORATED>?check_config@@YA?AV?$vector@V?$Col@_K@arma@@V?$allocator@V?$Col@_K@arma@@@std@@@std@@V?$Col@_K@arma@@00@Z</DECORATED>
+    <FUNCLINE>259</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>302</LINE>
+      <COLUMN>22</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>check_config</FUNCTION>
+    <DECORATED>?check_config@@YA?AV?$vector@V?$Col@_K@arma@@V?$allocator@V?$Col@_K@arma@@@std@@@std@@V?$Col@_K@arma@@00@Z</DECORATED>
+    <FUNCLINE>259</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>303</LINE>
+      <COLUMN>22</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>check_config</FUNCTION>
+    <DECORATED>?check_config@@YA?AV?$vector@V?$Col@_K@arma@@V?$allocator@V?$Col@_K@arma@@@std@@@std@@V?$Col@_K@arma@@00@Z</DECORATED>
+    <FUNCLINE>259</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>303</LINE>
+      <COLUMN>39</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>check_config</FUNCTION>
+    <DECORATED>?check_config@@YA?AV?$vector@V?$Col@_K@arma@@V?$allocator@V?$Col@_K@arma@@@std@@@std@@V?$Col@_K@arma@@00@Z</DECORATED>
+    <FUNCLINE>259</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>303</LINE>
+      <COLUMN>56</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>check_config</FUNCTION>
+    <DECORATED>?check_config@@YA?AV?$vector@V?$Col@_K@arma@@V?$allocator@V?$Col@_K@arma@@@std@@@std@@V?$Col@_K@arma@@00@Z</DECORATED>
+    <FUNCLINE>259</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>344</LINE>
+      <COLUMN>18</COLUMN>
+    </SFA>
+    <DEFECTCODE>6328</DEFECTCODE>
+    <DESCRIPTION>Size mismatch: 'unsigned __int64' passed as _Param_(2) when 'int' is required in call to 'printf'. </DESCRIPTION>
+    <FUNCTION>print_grids</FUNCTION>
+    <DECORATED>?print_grids@@YAXV?$vector@V?$Col@_K@arma@@V?$allocator@V?$Col@_K@arma@@@std@@@std@@V?$Col@_K@arma@@@Z</DECORATED>
+    <FUNCLINE>334</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>351</LINE>
+      <COLUMN>22</COLUMN>
+    </SFA>
+    <DEFECTCODE>6328</DEFECTCODE>
+    <DESCRIPTION>Size mismatch: 'unsigned __int64' passed as _Param_(2) when 'int' is required in call to 'printf'. </DESCRIPTION>
+    <FUNCTION>print_grids</FUNCTION>
+    <DECORATED>?print_grids@@YAXV?$vector@V?$Col@_K@arma@@V?$allocator@V?$Col@_K@arma@@@std@@@std@@V?$Col@_K@arma@@@Z</DECORATED>
+    <FUNCLINE>334</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>379</LINE>
+      <COLUMN>25</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>main</FUNCTION>
+    <DECORATED>main</DECORATED>
+    <FUNCLINE>364</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+      <FILENAME>Col_meat.hpp</FILENAME>
+      <LINE>377</LINE>
+      <COLUMN>9</COLUMN>
+    </SFA>
+    <DEFECTCODE>26439</DEFECTCODE>
+    <DESCRIPTION>This kind of function should not throw. Declare it 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>arma::Col&lt;unsigned __int64&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$Col@_K@arma@@QEAA@$$QEAV01@@Z</DECORATED>
+    <FUNCLINE>377</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+      <FILENAME>Col_meat.hpp</FILENAME>
+      <LINE>420</LINE>
+      <COLUMN>9</COLUMN>
+    </SFA>
+    <DEFECTCODE>26439</DEFECTCODE>
+    <DESCRIPTION>This kind of function should not throw. Declare it 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>arma::Col&lt;unsigned __int64&gt;::=</FUNCTION>
+    <DECORATED>??4?$Col@_K@arma@@QEAAAEAV01@$$QEAV01@@Z</DECORATED>
+    <FUNCLINE>420</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+      <FILENAME>Mat_meat.hpp</FILENAME>
+      <LINE>747</LINE>
+      <COLUMN>9</COLUMN>
+    </SFA>
+    <DEFECTCODE>26439</DEFECTCODE>
+    <DESCRIPTION>This kind of function should not throw. Declare it 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>arma::Mat&lt;double&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$Mat@N@arma@@QEAA@$$QEAV01@@Z</DECORATED>
+    <FUNCLINE>747</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+      <FILENAME>Mat_meat.hpp</FILENAME>
+      <LINE>747</LINE>
+      <COLUMN>9</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'arma::Mat&lt;double&gt;::mem_local' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>arma::Mat&lt;double&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$Mat@N@arma@@QEAA@$$QEAV01@@Z</DECORATED>
+    <FUNCLINE>747</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>arma::Mat&lt;double&gt;::mem_local</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+      <FILENAME>Cube_meat.hpp</FILENAME>
+      <LINE>280</LINE>
+      <COLUMN>10</COLUMN>
+    </SFA>
+    <DEFECTCODE>26439</DEFECTCODE>
+    <DESCRIPTION>This kind of function should not throw. Declare it 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>arma::Cube&lt;double&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$Cube@N@arma@@QEAA@$$QEAV01@@Z</DECORATED>
+    <FUNCLINE>280</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+      <FILENAME>SpMat_meat.hpp</FILENAME>
+      <LINE>238</LINE>
+      <COLUMN>11</COLUMN>
+    </SFA>
+    <DEFECTCODE>26439</DEFECTCODE>
+    <DESCRIPTION>This kind of function should not throw. Declare it 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>arma::SpMat&lt;double&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$SpMat@N@arma@@QEAA@$$QEAV01@@Z</DECORATED>
+    <FUNCLINE>238</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+      <FILENAME>field_meat.hpp</FILENAME>
+      <LINE>41</LINE>
+      <COLUMN>11</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'arma::field&lt;std::basic_string&lt;char,std::char_traits&lt;char&gt;,std::allocator&lt;char&gt; &gt; &gt;::mem_local' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>arma::field&lt;std::basic_string&lt;char,std::char_traits&lt;char&gt;,std::allocator&lt;char&gt; &gt; &gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$field@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@arma@@QEAA@XZ</DECORATED>
+    <FUNCLINE>41</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>arma::field&lt;std::basic_string&lt;char,std::char_traits&lt;char&gt;,std::allocator&lt;char&gt; &gt; &gt;::mem_local</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+      <FILENAME>Mat_meat.hpp</FILENAME>
+      <LINE>247</LINE>
+      <COLUMN>9</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'arma::Mat&lt;unsigned __int64&gt;::mem_local' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>arma::Mat&lt;unsigned __int64&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$Mat@_K@arma@@IEAA@AEBUarma_vec_indicator@1@I@Z</DECORATED>
+    <FUNCLINE>247</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>arma::Mat&lt;unsigned __int64&gt;::mem_local</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+      <FILENAME>SpMat_meat.hpp</FILENAME>
+      <LINE>5718</LINE>
+      <COLUMN>41</COLUMN>
+    </SFA>
+    <DEFECTCODE>6011</DEFECTCODE>
+    <DESCRIPTION>Dereferencing NULL pointer 'values'. </DESCRIPTION>
+    <FUNCTION>arma::SpMat&lt;double&gt;::mem_resize</FUNCTION>
+    <DECORATED>?mem_resize@?$SpMat@N@arma@@QEAAX_K@Z</DECORATED>
+    <FUNCLINE>5690</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>C:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+        <FILENAME>SpMat_meat.hpp</FILENAME>
+        <LINE>5692</LINE>
+        <COLUMN>2</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+        <FILENAME>SpMat_meat.hpp</FILENAME>
+        <LINE>5694</LINE>
+        <COLUMN>18</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+        <FILENAME>SpMat_meat.hpp</FILENAME>
+        <LINE>5696</LINE>
+        <COLUMN>15</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+        <FILENAME>SpMat_meat.hpp</FILENAME>
+        <LINE>5698</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+        <FILENAME>SpMat_meat.hpp</FILENAME>
+        <LINE>5699</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+        <FILENAME>SpMat_meat.hpp</FILENAME>
+        <LINE>5701</LINE>
+        <COLUMN>23</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+        <FILENAME>SpMat_meat.hpp</FILENAME>
+        <LINE>5710</LINE>
+        <COLUMN>5</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'values' may be NULL (Skip this branch)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+        <FILENAME>SpMat_meat.hpp</FILENAME>
+        <LINE>5711</LINE>
+        <COLUMN>5</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this branch, (assume 'row_indices' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+        <FILENAME>SpMat_meat.hpp</FILENAME>
+        <LINE>5713</LINE>
+        <COLUMN>26</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+        <FILENAME>SpMat_meat.hpp</FILENAME>
+        <LINE>5714</LINE>
+        <COLUMN>26</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+        <FILENAME>SpMat_meat.hpp</FILENAME>
+        <LINE>5718</LINE>
+        <COLUMN>41</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'values' is dereferenced, but may still be NULL</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+      <FILENAME>SpMat_meat.hpp</FILENAME>
+      <LINE>5719</LINE>
+      <COLUMN>41</COLUMN>
+    </SFA>
+    <DEFECTCODE>6011</DEFECTCODE>
+    <DESCRIPTION>Dereferencing NULL pointer 'row_indices'. </DESCRIPTION>
+    <FUNCTION>arma::SpMat&lt;double&gt;::mem_resize</FUNCTION>
+    <DECORATED>?mem_resize@?$SpMat@N@arma@@QEAAX_K@Z</DECORATED>
+    <FUNCLINE>5690</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>C:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+        <FILENAME>SpMat_meat.hpp</FILENAME>
+        <LINE>5692</LINE>
+        <COLUMN>2</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+        <FILENAME>SpMat_meat.hpp</FILENAME>
+        <LINE>5694</LINE>
+        <COLUMN>18</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+        <FILENAME>SpMat_meat.hpp</FILENAME>
+        <LINE>5696</LINE>
+        <COLUMN>15</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+        <FILENAME>SpMat_meat.hpp</FILENAME>
+        <LINE>5698</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+        <FILENAME>SpMat_meat.hpp</FILENAME>
+        <LINE>5699</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+        <FILENAME>SpMat_meat.hpp</FILENAME>
+        <LINE>5701</LINE>
+        <COLUMN>23</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+        <FILENAME>SpMat_meat.hpp</FILENAME>
+        <LINE>5710</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+        <FILENAME>SpMat_meat.hpp</FILENAME>
+        <LINE>5711</LINE>
+        <COLUMN>5</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'row_indices' may be NULL (Skip this branch)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+        <FILENAME>SpMat_meat.hpp</FILENAME>
+        <LINE>5713</LINE>
+        <COLUMN>26</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+        <FILENAME>SpMat_meat.hpp</FILENAME>
+        <LINE>5714</LINE>
+        <COLUMN>26</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+        <FILENAME>SpMat_meat.hpp</FILENAME>
+        <LINE>5718</LINE>
+        <COLUMN>41</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+        <FILENAME>SpMat_meat.hpp</FILENAME>
+        <LINE>5719</LINE>
+        <COLUMN>41</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'row_indices' is dereferenced, but may still be NULL</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+      <FILENAME>mtOp_meat.hpp</FILENAME>
+      <LINE>36</LINE>
+      <COLUMN>27</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'arma::mtOp&lt;unsigned __int64,arma::Row&lt;unsigned __int64&gt;,arma::op_rel_eq&gt;::aux_uword_b' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>arma::mtOp&lt;unsigned __int64,arma::Row&lt;unsigned __int64&gt;,arma::op_rel_eq&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$mtOp@_KV?$Row@_K@arma@@Vop_rel_eq@2@@arma@@QEAA@AEBV?$Row@_K@1@_K@Z</DECORATED>
+    <FUNCLINE>36</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>arma::mtOp&lt;unsigned __int64,arma::Row&lt;unsigned __int64&gt;,arma::op_rel_eq&gt;::aux_uword_b</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+      <FILENAME>Op_meat.hpp</FILENAME>
+      <LINE>26</LINE>
+      <COLUMN>17</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'arma::Op&lt;arma::Mat&lt;unsigned __int64&gt;,arma::op_nonzeros&gt;::aux_uword_c' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>arma::Op&lt;arma::Mat&lt;unsigned __int64&gt;,arma::op_nonzeros&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$Op@V?$Mat@_K@arma@@Vop_nonzeros@2@@arma@@QEAA@AEBV?$Mat@_K@1@@Z</DECORATED>
+    <FUNCLINE>26</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>arma::Op&lt;arma::Mat&lt;unsigned __int64&gt;,arma::op_nonzeros&gt;::aux_uword_c</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+      <FILENAME>eOp_meat.hpp</FILENAME>
+      <LINE>36</LINE>
+      <COLUMN>19</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'arma::eOp&lt;arma::Col&lt;unsigned __int64&gt;,arma::eop_scalar_minus_pre&gt;::aux_uword_b' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>arma::eOp&lt;arma::Col&lt;unsigned __int64&gt;,arma::eop_scalar_minus_pre&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$eOp@V?$Col@_K@arma@@Veop_scalar_minus_pre@2@@arma@@QEAA@AEBV?$Col@_K@1@_K@Z</DECORATED>
+    <FUNCLINE>36</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>arma::eOp&lt;arma::Col&lt;unsigned __int64&gt;,arma::eop_scalar_minus_pre&gt;::aux_uword_b</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+      <FILENAME>Op_meat.hpp</FILENAME>
+      <LINE>60</LINE>
+      <COLUMN>17</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'arma::Op&lt;arma::Col&lt;unsigned __int64&gt;,arma::op_sort_vec&gt;::aux_uword_c' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>arma::Op&lt;arma::Col&lt;unsigned __int64&gt;,arma::op_sort_vec&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$Op@V?$Col@_K@arma@@Vop_sort_vec@2@@arma@@QEAA@AEBV?$Col@_K@1@_K1@Z</DECORATED>
+    <FUNCLINE>60</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>arma::Op&lt;arma::Col&lt;unsigned __int64&gt;,arma::op_sort_vec&gt;::aux_uword_c</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+      <FILENAME>arma_rng_cxx03.hpp</FILENAME>
+      <LINE>159</LINE>
+      <COLUMN>37</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>arma::arma_rng_cxx03::randi_fill</FUNCTION>
+    <DECORATED>??$randi_fill@_J@arma_rng_cxx03@arma@@SAXPEA_J_KHH@Z</DECORATED>
+    <FUNCLINE>148</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+      <FILENAME>arma_rng_cxx03.hpp</FILENAME>
+      <LINE>159</LINE>
+      <COLUMN>33</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>arma::arma_rng_cxx03::randi_fill</FUNCTION>
+    <DECORATED>??$randi_fill@_J@arma_rng_cxx03@arma@@SAXPEA_J_KHH@Z</DECORATED>
+    <FUNCLINE>148</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+      <FILENAME>Cube_meat.hpp</FILENAME>
+      <LINE>578</LINE>
+      <COLUMN>31</COLUMN>
+    </SFA>
+    <DEFECTCODE>28193</DEFECTCODE>
+    <DESCRIPTION>'Temp_value_#14221' holds a value that must be examined.</DESCRIPTION>
+    <FUNCTION>arma::Cube&lt;double&gt;::create_mat</FUNCTION>
+    <DECORATED>?create_mat@?$Cube@N@arma@@IEAAXXZ</DECORATED>
+    <FUNCLINE>560</FUNCLINE>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+        <FILENAME>cube_meat.hpp</FILENAME>
+        <LINE>562</LINE>
+        <COLUMN>2</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+        <FILENAME>cube_meat.hpp</FILENAME>
+        <LINE>564</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+        <FILENAME>cube_meat.hpp</FILENAME>
+        <LINE>570</LINE>
+        <COLUMN>17</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+        <FILENAME>cube_meat.hpp</FILENAME>
+        <LINE>572</LINE>
+        <COLUMN>18</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+        <FILENAME>cube_meat.hpp</FILENAME>
+        <LINE>578</LINE>
+        <COLUMN>29</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+        <FILENAME>cube_meat.hpp</FILENAME>
+        <LINE>580</LINE>
+        <COLUMN>28</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+        <FILENAME>cube_meat.hpp</FILENAME>
+        <LINE>584</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+        <FILENAME>cube_meat.hpp</FILENAME>
+        <LINE>584</LINE>
+        <COLUMN>33</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+        <FILENAME>cube_meat.hpp</FILENAME>
+        <LINE>586</LINE>
+        <COLUMN>23</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+        <FILENAME>cube_meat.hpp</FILENAME>
+        <LINE>584</LINE>
+        <COLUMN>45</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+        <FILENAME>cube_meat.hpp</FILENAME>
+        <LINE>584</LINE>
+        <COLUMN>33</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+        <FILENAME>cube_meat.hpp</FILENAME>
+        <LINE>586</LINE>
+        <COLUMN>23</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+        <FILENAME>cube_meat.hpp</FILENAME>
+        <LINE>584</LINE>
+        <COLUMN>45</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+        <FILENAME>cube_meat.hpp</FILENAME>
+        <LINE>584</LINE>
+        <COLUMN>33</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+        <FILENAME>cube_meat.hpp</FILENAME>
+        <LINE>589</LINE>
+        <COLUMN>2</COLUMN>
+      </SFA>
+    </PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+      <FILENAME>Cube_meat.hpp</FILENAME>
+      <LINE>586</LINE>
+      <COLUMN>23</COLUMN>
+    </SFA>
+    <DEFECTCODE>6011</DEFECTCODE>
+    <DESCRIPTION>Dereferencing NULL pointer 'mat_ptrs'. </DESCRIPTION>
+    <FUNCTION>arma::Cube&lt;double&gt;::create_mat</FUNCTION>
+    <DECORATED>?create_mat@?$Cube@N@arma@@IEAAXXZ</DECORATED>
+    <FUNCLINE>560</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>C:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+        <FILENAME>Cube_meat.hpp</FILENAME>
+        <LINE>562</LINE>
+        <COLUMN>2</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+        <FILENAME>Cube_meat.hpp</FILENAME>
+        <LINE>564</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+        <FILENAME>Cube_meat.hpp</FILENAME>
+        <LINE>570</LINE>
+        <COLUMN>17</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+        <FILENAME>Cube_meat.hpp</FILENAME>
+        <LINE>572</LINE>
+        <COLUMN>18</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+        <FILENAME>Cube_meat.hpp</FILENAME>
+        <LINE>578</LINE>
+        <COLUMN>29</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+        <FILENAME>Cube_meat.hpp</FILENAME>
+        <LINE>580</LINE>
+        <COLUMN>28</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'mat_ptrs' may be NULL</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+        <FILENAME>Cube_meat.hpp</FILENAME>
+        <LINE>584</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+        <FILENAME>Cube_meat.hpp</FILENAME>
+        <LINE>584</LINE>
+        <COLUMN>33</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this loop, (assume 'uslice&lt;n_slices')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+        <FILENAME>Cube_meat.hpp</FILENAME>
+        <LINE>586</LINE>
+        <COLUMN>23</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'mat_ptrs' is dereferenced, but may still be NULL</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\src\vcpkg\packages\armadillo_x64-windows\include\armadillo_bits\</FILEPATH>
+      <FILENAME>Mat_meat.hpp</FILENAME>
+      <LINE>45</LINE>
+      <COLUMN>9</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'arma::Mat&lt;unsigned __int64&gt;::mem_local' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>arma::Mat&lt;unsigned __int64&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$Mat@_K@arma@@QEAA@XZ</DECORATED>
+    <FUNCLINE>45</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>arma::Mat&lt;unsigned __int64&gt;::mem_local</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT></DEFECTS>
