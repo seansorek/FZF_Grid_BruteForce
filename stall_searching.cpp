@@ -14,11 +14,9 @@ vector<vector<unsigned>> make_configs(const vector<unsigned> dim, const int fill
     const int n = dim[1];
     vector<vector<unsigned>> out = vector<vector<unsigned>>();
     unsigned long long int total_configs = pow(m, n);
-    vector<unsigned> config;
-    int config_sum;
     for (unsigned long long int i = 0; i < total_configs; i++) { //TODO parallelize this, but theres a race condition for checking reverses
-        config_sum = 0;
-        config = vector<unsigned>(n);
+        int config_sum = 0;
+        vector<unsigned> config = vector<unsigned>(n);
         //fast to check conditions
         if (i % m == 0 || (int)floor(i / pow(m, n - 1)) % m == 0) {
             continue;
@@ -167,11 +165,9 @@ vector<unsigned> find_hats(const unsigned index, const vector<unsigned> dim) {
     unsigned num_neighbors = std::count_if(ind_nb.begin() + 1, ind_nb.end(), [](unsigned i) {return i > 0; });
     vector<unsigned> hats(5 * num_neighbors);
     unsigned hat_index = 0;
-    unsigned neighbor;
-    vector<unsigned> nb_hat;
     for (unsigned i = 1; i <= num_neighbors; i++) {
-        neighbor = ind_nb[i];
-        nb_hat = find_nb(neighbor, dim);
+        unsigned neighbor = ind_nb[i];
+        vector<unsigned> nb_hat = find_nb(neighbor, dim);
         iter_swap(nb_hat.begin(), find(nb_hat.begin(), nb_hat.end(), index));
         std::copy(nb_hat.begin(), nb_hat.end(), hats.begin() + hat_index);
         hat_index += 5;
@@ -193,13 +189,11 @@ vector<unsigned> find_hats_grid(const vector<unsigned> dim) {
         hats = vector<unsigned>(5 * (2 * 4 + 6 * (m - 2 + n - 2) + 4 * ((m - 2) * (n - 2))));
     }
     unsigned hat_it = 0;
-    vector<unsigned> ind_nb;
-    unsigned num_neighbors;
-    vector<unsigned> index_hats;
+
     for (unsigned i = 0; i < m * n; i++) {
-        ind_nb = find_nb(i + 1, dim);
-        num_neighbors = std::count_if(ind_nb.begin(), ind_nb.end(), [](unsigned i) {return i > 0; }) - 1;
-        index_hats = find_hats(i + 1, dim);
+        vector<unsigned> ind_nb = find_nb(i + 1, dim);
+        unsigned num_neighbors = std::count_if(ind_nb.begin(), ind_nb.end(), [](unsigned i) {return i > 0; }) - 1;
+        vector<unsigned> index_hats = find_hats(i + 1, dim);
         std::copy(index_hats.begin(), index_hats.end(), hats.begin() + hat_it);
         hat_it += 5 * num_neighbors;
     }
@@ -210,23 +204,25 @@ vector<unsigned> find_hats_grid(const vector<unsigned> dim) {
 
 bool stall_check(unordered_set<unsigned> zeroes, vector<unsigned> hats) {
     vector<unsigned>::iterator i = hats.begin();
-    bool flag;
-    vector<unsigned>::iterator next_check;
     while (i != hats.end()) {
-        if (find(zeroes.begin(), zeroes.end(), *i) == zeroes.end()) { advance(i, 5); continue; }
+        // if there is a 1 at the index, move onto the next index
+        if (!zeroes.contains(*i)) { advance(i, 5); continue; }
 
-        next_check = next(i, 5);
-        flag = false;
-        i++;
+        // *i == 0, each iteration is ONE hat
+        vector<unsigned>::iterator next_check = next(i, 5);
+        bool flag = false;
+        ++i;
 
+        //check all nodes in the hat
         while (*i != 0 && i != next_check) {
-            if (find(zeroes.begin(), zeroes.end(), *i) != zeroes.end()) {
+            //if there is a zero in the hat, we are happy and move onto the next hat
+            if (zeroes.contains(*i)) {
                 flag = true;
                 break;
             }
-            i++;
+            ++i;
         }
-
+        //the zero we found gets filled in the next step! the set doesn't stall :(
         if (!flag) {
             return false;
         }
@@ -256,23 +252,22 @@ int nCk(int n, int k)
 vector<vector<unsigned>> find_combn(const int N, const int K, const int c, const vector<unsigned> dim) {
     const size_t size = nCk(N, K);
     vector<vector<unsigned>> combs(nCk(N, K));
-    vector<unsigned> comb;
     string bitmask(K, 1);
     bitmask.resize(N, 0);
     int j = 0;
     auto it = combs.begin();
     do {
-        comb = vector<unsigned>(K);
+        vector<unsigned> comb = vector<unsigned>(K);
         int k = 0;
         for (unsigned i = 0; i < N; ++i) {
             if (bitmask[i]) {
                 comb[k] = i + 1 + (c - 1) * dim[0];
-                k++;
+                ++k;
             }
 
         }
         *it = comb;
-        it++;
+        ++it;
     } while (std::prev_permutation(bitmask.begin(), bitmask.end()));
     return combs;
 }
@@ -288,16 +283,12 @@ vector<unordered_set<unsigned>> check_config_rev(const vector<unsigned> config,
     vector<unsigned> lengths(n);
     vector<unsigned> factors(n);
     int out_length = accumulate(config.begin(), config.end(), 0);
-    vector<vector<unsigned>> colIndices;
 
     vector<unordered_set<unsigned>> stallout;
-    int index;
-    int zero_index;
-    unordered_set<unsigned> zeroes(out_length);
-    vector<unsigned> option;
+    ;
     //create indices
     for (int c = 1; c <= n; c++) {
-        colIndices = find_combn(m, config[c - 1], c + (last_zero + 1), dim);
+        vector<vector<unsigned>> colIndices = find_combn(m, config[c - 1], c + (last_zero + 1), dim);
 
         options[c - 1] = colIndices;
         lengths[c - 1] = colIndices.size();
@@ -309,14 +300,13 @@ vector<unordered_set<unsigned>> check_config_rev(const vector<unsigned> config,
         }
     }
 
-    int total_length = factors[dim[1] - 1] * lengths[dim[1] - 1];
+    int total_length = factors[n - 1] * lengths[n - 1];
 
     for (int i = 0; i < total_length; i++) {
-        zeroes.clear();
-        zero_index = 0;
-        zeroes.reserve(out_length);
+        unordered_set<unsigned> zeroes(out_length);
+        int zero_index = 0;
         for (int k = 0; k < n; k++) {
-            option = options[k][i / factors[k] % lengths[k]];
+            vector<unsigned> option = options[k][i / factors[k] % lengths[k]];
             zeroes.insert(option.begin(), option.end());
         }
 
@@ -346,20 +336,16 @@ vector<unordered_set<unsigned>> check_config(const vector<unsigned> config, cons
     vector<int> lengths(n);
     vector<int> factors(n);
     int out_length = accumulate(config.begin(), config.end(), 0);
-    vector<vector<unsigned>> colIndices;
 
     vector<unordered_set<unsigned>> stallout;
-    int index;
-    int zero_index;
-    unordered_set<unsigned> zeroes(out_length);
-    vector<unsigned> option;
     //create indices
     for (int c = 1; c <= n; c++) {
-        colIndices = find_combn(m, config[c - 1], c, dim);
+        vector<vector<unsigned>> colIndices = find_combn(m, config[c - 1], c, dim);
 
         int n_ = colIndices.size();
         if (c == 1) {
 
+            // is the reverse in here already?
             vector<vector<unsigned>> noRevIndices = vector<vector<unsigned>>();
             noRevIndices.push_back(colIndices[0]);
             for (int r = 1; r < n_; r++) {
@@ -383,13 +369,12 @@ vector<unordered_set<unsigned>> check_config(const vector<unsigned> config, cons
 
     int total_length = factors[dim[1] - 1] * lengths[dim[1] - 1];
 
-
+    //iterate over all possible column configurations, check if one stalls
     for (int i = 0; i < total_length; i++) {
-        zeroes.clear(); //this is by far the slowest part of the algorithm
-        zero_index = 0;
-        zeroes.reserve(out_length);
+        unordered_set<unsigned> zeroes(out_length); //this is by far the slowest part of the algorithm
+        int zero_index = 0;
         for (int k = 0; k < n; k++) {
-            option = options[k][i / factors[k] % lengths[k]];
+            vector<unsigned> option = options[k][i / factors[k] % lengths[k]];
             zeroes.insert(option.begin(), option.end());
         }
 
@@ -403,6 +388,9 @@ vector<unordered_set<unsigned>> check_config(const vector<unsigned> config, cons
     return stallout;
 }
 
+// this handles the case where the grid can be split into multiple smaller grids.
+// theres a dynamic programming solution for this that's way more elegant
+// this function becomes astronomically slow for small m - large n scenarios but those can be trivially solved by hand
 vector<unordered_set<unsigned>> check_config_spl(const vector<unsigned> config, const vector<unsigned> dim, const vector<unsigned> hats) {
     if (find(config.begin(), config.end(), 0) == config.end()) {
         return check_config(config, dim, hats);
@@ -412,28 +400,21 @@ vector<unordered_set<unsigned>> check_config_spl(const vector<unsigned> config, 
     int which_sub = 0;
     int last_zero = -1;
     int num_subs = count_if(config.begin(), config.end(), [](unsigned u) {return u == 0; }) + 1;
-    int sub_stall_length;
-    int total_length;
-    int index;
-    int zero_index;
+
     int out_length = accumulate(config.begin(), config.end(), 0);
     vector<unsigned> lengths(num_subs);
     vector<unsigned> factors(num_subs);
-    vector<unsigned> sub_dim;
-    vector<unsigned> sub_hats;
-    vector<unsigned> sub_config;
     unordered_set<unsigned> zeroes(out_length);
-    unordered_set<unsigned> option;
 
-    vector<unordered_set<unsigned>> sublist; //some of these could probably be converted to sets, but there isnt really a point
+     //some of these could probably be converted to sets, but there isnt really a point
     vector<unordered_set<unsigned>> stallout;
     vector<vector<unordered_set<unsigned>>> sub_stalls(num_subs);
 
     for (int j = 0; j <= dim[1]; j++) {
         if (j == dim[1] || config[j] == 0) {
-            sub_dim = { dim[0], subcols };
-            sub_hats = find_hats_grid(sub_dim);
-            sub_config = vector<unsigned>(subcols);
+            vector<unsigned> sub_dim = { dim[0], subcols };
+            vector<unsigned> sub_hats = find_hats_grid(sub_dim);
+            vector<unsigned> sub_config = vector<unsigned>(subcols);
             copy_n(config.begin() + (last_zero + 1), subcols, sub_config.begin());
             vector<unordered_set<unsigned>> sub_stall = check_config_rev(sub_config, sub_dim, sub_hats, last_zero);
 
@@ -441,10 +422,8 @@ vector<unordered_set<unsigned>> check_config_spl(const vector<unsigned> config, 
                 break;
             }
 
-            sub_stall_length = sub_stall.size();
-
             sub_stalls[which_sub] = sub_stall;
-            lengths[which_sub] = sub_stall_length;
+            lengths[which_sub] = sub_stall.size();
 
             if (which_sub == 0) {
                 factors[which_sub] = 1;
@@ -462,14 +441,14 @@ vector<unordered_set<unsigned>> check_config_spl(const vector<unsigned> config, 
         }
     }
 
-    total_length = factors[num_subs - 1] * lengths[num_subs - 1];
+    int total_length = factors[num_subs - 1] * lengths[num_subs - 1];
 
     for (unsigned i = 0; i < total_length; i++) {
         zeroes.clear();
-        zero_index = 0;
+        int zero_index = 0;
         zeroes.reserve(out_length);
         for (int k = 0; k < num_subs; k++) {
-            option = sub_stalls[k][i / factors[k] % lengths[k]];
+            unordered_set<unsigned> option = sub_stalls[k][i / factors[k] % lengths[k]];
             zeroes.insert(option.begin(), option.end());
         }
 

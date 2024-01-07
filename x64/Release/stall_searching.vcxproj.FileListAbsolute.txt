@@ -1,1 +1,2 @@
 C:\Users\Sean Sorek HP Laptop\source\repos\stall_searching\x64\Release\stall_searching.exe
+C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\x64\Release\stall_searching.exe

@@ -1,0 +1,1066 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Sean Sorek HP Laptop/Documents/FZF_Grid_BruteForce/stall_searching.cpp"
+                },
+                "region": {
+                  "startLine": 45,
+                  "startColumn": 24,
+                  "endLine": 45,
+                  "endColumn": 28
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "make_configs",
+                  "decoratedName": "?make_configs@@YA?AV?$vector@V?$vector@IV?$allocator@I@std@@@std@@V?$allocator@V?$vector@IV?$allocator@I@std@@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@H@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Sean Sorek HP Laptop/Documents/FZF_Grid_BruteForce/stall_searching.cpp"
+                },
+                "region": {
+                  "startLine": 64,
+                  "startColumn": 36,
+                  "endLine": 64,
+                  "endColumn": 40
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "make_configs",
+                  "decoratedName": "?make_configs@@YA?AV?$vector@V?$vector@IV?$allocator@I@std@@@std@@V?$allocator@V?$vector@IV?$allocator@I@std@@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@H@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Sean Sorek HP Laptop/Documents/FZF_Grid_BruteForce/stall_searching.cpp"
+                },
+                "region": {
+                  "startLine": 86,
+                  "startColumn": 20,
+                  "endLine": 86,
+                  "endColumn": 24
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "make_configs",
+                  "decoratedName": "?make_configs@@YA?AV?$vector@V?$vector@IV?$allocator@I@std@@@std@@V?$allocator@V?$vector@IV?$allocator@I@std@@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@H@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Sean Sorek HP Laptop/Documents/FZF_Grid_BruteForce/stall_searching.cpp"
+                },
+                "region": {
+                  "startLine": 86,
+                  "startColumn": 42,
+                  "endLine": 86,
+                  "endColumn": 46
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "make_configs",
+                  "decoratedName": "?make_configs@@YA?AV?$vector@V?$vector@IV?$allocator@I@std@@@std@@V?$allocator@V?$vector@IV?$allocator@I@std@@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@H@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Sean Sorek HP Laptop/Documents/FZF_Grid_BruteForce/stall_searching.cpp"
+                },
+                "region": {
+                  "startLine": 166,
+                  "startColumn": 27,
+                  "endLine": 166,
+                  "endColumn": 31
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "find_hats",
+                  "decoratedName": "?find_hats@@YA?AV?$vector@IV?$allocator@I@std@@@std@@IV12@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Sean Sorek HP Laptop/Documents/FZF_Grid_BruteForce/stall_searching.cpp"
+                },
+                "region": {
+                  "startLine": 185,
+                  "startColumn": 33,
+                  "endLine": 185,
+                  "endColumn": 55
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "find_hats_grid",
+                  "decoratedName": "?find_hats_grid@@YA?AV?$vector@IV?$allocator@I@std@@@std@@V12@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Sean Sorek HP Laptop/Documents/FZF_Grid_BruteForce/stall_searching.cpp"
+                },
+                "region": {
+                  "startLine": 189,
+                  "startColumn": 33,
+                  "endLine": 189,
+                  "endColumn": 88
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "find_hats_grid",
+                  "decoratedName": "?find_hats_grid@@YA?AV?$vector@IV?$allocator@I@std@@@std@@V12@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Sean Sorek HP Laptop/Documents/FZF_Grid_BruteForce/stall_searching.cpp"
+                },
+                "region": {
+                  "startLine": 287,
+                  "startColumn": 68,
+                  "endLine": 287,
+                  "endColumn": 72
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "check_config_rev",
+                  "decoratedName": "?check_config_rev@@YA?AV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@00I@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Sean Sorek HP Laptop/Documents/FZF_Grid_BruteForce/stall_searching.cpp"
+                },
+                "region": {
+                  "startLine": 289,
+                  "startColumn": 17,
+                  "endLine": 289,
+                  "endColumn": 21
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "check_config_rev",
+                  "decoratedName": "?check_config_rev@@YA?AV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@00I@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Sean Sorek HP Laptop/Documents/FZF_Grid_BruteForce/stall_searching.cpp"
+                },
+                "region": {
+                  "startLine": 290,
+                  "startColumn": 17,
+                  "endLine": 290,
+                  "endColumn": 21
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "check_config_rev",
+                  "decoratedName": "?check_config_rev@@YA?AV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@00I@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Sean Sorek HP Laptop/Documents/FZF_Grid_BruteForce/stall_searching.cpp"
+                },
+                "region": {
+                  "startLine": 292,
+                  "startColumn": 21,
+                  "endLine": 292,
+                  "endColumn": 25
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "check_config_rev",
+                  "decoratedName": "?check_config_rev@@YA?AV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@00I@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Sean Sorek HP Laptop/Documents/FZF_Grid_BruteForce/stall_searching.cpp"
+                },
+                "region": {
+                  "startLine": 295,
+                  "startColumn": 21,
+                  "endLine": 295,
+                  "endColumn": 25
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "check_config_rev",
+                  "decoratedName": "?check_config_rev@@YA?AV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@00I@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Sean Sorek HP Laptop/Documents/FZF_Grid_BruteForce/stall_searching.cpp"
+                },
+                "region": {
+                  "startLine": 295,
+                  "startColumn": 38,
+                  "endLine": 295,
+                  "endColumn": 42
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "check_config_rev",
+                  "decoratedName": "?check_config_rev@@YA?AV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@00I@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Sean Sorek HP Laptop/Documents/FZF_Grid_BruteForce/stall_searching.cpp"
+                },
+                "region": {
+                  "startLine": 295,
+                  "startColumn": 55,
+                  "endLine": 295,
+                  "endColumn": 59
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "check_config_rev",
+                  "decoratedName": "?check_config_rev@@YA?AV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@00I@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Sean Sorek HP Laptop/Documents/FZF_Grid_BruteForce/stall_searching.cpp"
+                },
+                "region": {
+                  "startLine": 299,
+                  "startColumn": 32,
+                  "endLine": 299,
+                  "endColumn": 36
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "check_config_rev",
+                  "decoratedName": "?check_config_rev@@YA?AV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@00I@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Sean Sorek HP Laptop/Documents/FZF_Grid_BruteForce/stall_searching.cpp"
+                },
+                "region": {
+                  "startLine": 299,
+                  "startColumn": 49,
+                  "endLine": 299,
+                  "endColumn": 53
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "check_config_rev",
+                  "decoratedName": "?check_config_rev@@YA?AV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@00I@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Sean Sorek HP Laptop/Documents/FZF_Grid_BruteForce/stall_searching.cpp"
+                },
+                "region": {
+                  "startLine": 339,
+                  "startColumn": 68,
+                  "endLine": 339,
+                  "endColumn": 72
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "check_config",
+                  "decoratedName": "?check_config@@YA?AV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@00@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Sean Sorek HP Laptop/Documents/FZF_Grid_BruteForce/stall_searching.cpp"
+                },
+                "region": {
+                  "startLine": 353,
+                  "startColumn": 21,
+                  "endLine": 353,
+                  "endColumn": 25
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "check_config",
+                  "decoratedName": "?check_config@@YA?AV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@00@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Sean Sorek HP Laptop/Documents/FZF_Grid_BruteForce/stall_searching.cpp"
+                },
+                "region": {
+                  "startLine": 354,
+                  "startColumn": 21,
+                  "endLine": 354,
+                  "endColumn": 25
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "check_config",
+                  "decoratedName": "?check_config@@YA?AV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@00@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Sean Sorek HP Laptop/Documents/FZF_Grid_BruteForce/stall_searching.cpp"
+                },
+                "region": {
+                  "startLine": 355,
+                  "startColumn": 21,
+                  "endLine": 355,
+                  "endColumn": 25
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "check_config",
+                  "decoratedName": "?check_config@@YA?AV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@00@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Sean Sorek HP Laptop/Documents/FZF_Grid_BruteForce/stall_searching.cpp"
+                },
+                "region": {
+                  "startLine": 359,
+                  "startColumn": 21,
+                  "endLine": 359,
+                  "endColumn": 25
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "check_config",
+                  "decoratedName": "?check_config@@YA?AV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@00@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Sean Sorek HP Laptop/Documents/FZF_Grid_BruteForce/stall_searching.cpp"
+                },
+                "region": {
+                  "startLine": 360,
+                  "startColumn": 21,
+                  "endLine": 360,
+                  "endColumn": 25
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "check_config",
+                  "decoratedName": "?check_config@@YA?AV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@00@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Sean Sorek HP Laptop/Documents/FZF_Grid_BruteForce/stall_searching.cpp"
+                },
+                "region": {
+                  "startLine": 361,
+                  "startColumn": 21,
+                  "endLine": 361,
+                  "endColumn": 25
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "check_config",
+                  "decoratedName": "?check_config@@YA?AV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@00@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Sean Sorek HP Laptop/Documents/FZF_Grid_BruteForce/stall_searching.cpp"
+                },
+                "region": {
+                  "startLine": 361,
+                  "startColumn": 38,
+                  "endLine": 361,
+                  "endColumn": 42
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "check_config",
+                  "decoratedName": "?check_config@@YA?AV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@00@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Sean Sorek HP Laptop/Documents/FZF_Grid_BruteForce/stall_searching.cpp"
+                },
+                "region": {
+                  "startLine": 361,
+                  "startColumn": 55,
+                  "endLine": 361,
+                  "endColumn": 59
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "check_config",
+                  "decoratedName": "?check_config@@YA?AV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@00@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Sean Sorek HP Laptop/Documents/FZF_Grid_BruteForce/stall_searching.cpp"
+                },
+                "region": {
+                  "startLine": 414,
+                  "startColumn": 38,
+                  "endLine": 414,
+                  "endColumn": 50
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "check_config_spl",
+                  "decoratedName": "?check_config_spl@@YA?AV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@00@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Sean Sorek HP Laptop/Documents/FZF_Grid_BruteForce/stall_searching.cpp"
+                },
+                "region": {
+                  "startLine": 428,
+                  "startColumn": 46,
+                  "endLine": 428,
+                  "endColumn": 58
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "check_config_spl",
+                  "decoratedName": "?check_config_spl@@YA?AV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@00@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Sean Sorek HP Laptop/Documents/FZF_Grid_BruteForce/stall_searching.cpp"
+                },
+                "region": {
+                  "startLine": 428,
+                  "startColumn": 71,
+                  "endLine": 428,
+                  "endColumn": 83
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "check_config_spl",
+                  "decoratedName": "?check_config_spl@@YA?AV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@00@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Sean Sorek HP Laptop/Documents/FZF_Grid_BruteForce/stall_searching.cpp"
+                },
+                "region": {
+                  "startLine": 440,
+                  "startColumn": 32,
+                  "endLine": 440,
+                  "endColumn": 43
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "check_config_spl",
+                  "decoratedName": "?check_config_spl@@YA?AV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@00@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Sean Sorek HP Laptop/Documents/FZF_Grid_BruteForce/stall_searching.cpp"
+                },
+                "region": {
+                  "startLine": 440,
+                  "startColumn": 56,
+                  "endLine": 440,
+                  "endColumn": 67
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "check_config_spl",
+                  "decoratedName": "?check_config_spl@@YA?AV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@00@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6328",
+          "message": {
+            "text": "Size mismatch: 'unsigned __int64' passed as _Param_(2) when 'int' is required in call to 'printf'. "
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Sean Sorek HP Laptop/Documents/FZF_Grid_BruteForce/stall_searching.cpp"
+                },
+                "region": {
+                  "startLine": 463,
+                  "startColumn": 5,
+                  "endLine": 463,
+                  "endColumn": 62
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "stall_search",
+                  "decoratedName": "?stall_search@@YA?AV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@V?$vector@V?$vector@IV?$allocator@I@std@@@std@@V?$allocator@V?$vector@IV?$allocator@I@std@@@std@@@2@@2@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6993",
+          "message": {
+            "text": "Code analysis ignores OpenMP constructs; analyzing single-threaded code."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Sean Sorek HP Laptop/Documents/FZF_Grid_BruteForce/stall_searching.cpp"
+                },
+                "region": {
+                  "startLine": 481,
+                  "startColumn": 13,
+                  "endLine": 481,
+                  "endColumn": 13
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "C6328",
+          "message": {
+            "text": "Size mismatch: 'unsigned __int64' passed as _Param_(2) when 'int' is required in call to 'printf'. "
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Sean Sorek HP Laptop/Documents/FZF_Grid_BruteForce/stall_searching.cpp"
+                },
+                "region": {
+                  "startLine": 480,
+                  "startColumn": 5,
+                  "endLine": 480,
+                  "endColumn": 62
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "stall_search_par",
+                  "decoratedName": "?stall_search_par@@YA?AV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@V?$vector@V?$vector@IV?$allocator@I@std@@@std@@V?$allocator@V?$vector@IV?$allocator@I@std@@@std@@@2@@2@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Sean Sorek HP Laptop/Documents/FZF_Grid_BruteForce/stall_searching.cpp"
+                },
+                "region": {
+                  "startLine": 499,
+                  "startColumn": 27,
+                  "endLine": 499,
+                  "endColumn": 41
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "print_grids",
+                  "decoratedName": "?print_grids@@YAXV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Sean Sorek HP Laptop/Documents/FZF_Grid_BruteForce/stall_searching.cpp"
+                },
+                "region": {
+                  "startLine": 503,
+                  "startColumn": 21,
+                  "endLine": 503,
+                  "endColumn": 35
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "print_grids",
+                  "decoratedName": "?print_grids@@YAXV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Sean Sorek HP Laptop/Documents/FZF_Grid_BruteForce/stall_searching.cpp"
+                },
+                "region": {
+                  "startLine": 513,
+                  "startColumn": 36,
+                  "endLine": 513,
+                  "endColumn": 49
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "print_grids",
+                  "decoratedName": "?print_grids@@YAXV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Sean Sorek HP Laptop/Documents/FZF_Grid_BruteForce/stall_searching.cpp"
+                },
+                "region": {
+                  "startLine": 513,
+                  "startColumn": 36,
+                  "endLine": 513,
+                  "endColumn": 45
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "print_grids",
+                  "decoratedName": "?print_grids@@YAXV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.34.31935.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///C:/Users/Sean Sorek HP Laptop/Documents/FZF_Grid_BruteForce/stall_searching.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "7dac589a266c91db884e33bd8e7dd0762eeef8ff240182863617b447e74c65a6"
+          }
+        }
+      ]
+    }
+  ]
+}

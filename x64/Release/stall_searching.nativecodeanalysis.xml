@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>45</LINE>
+      <COLUMN>25</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>make_configs</FUNCTION>
+    <DECORATED>?make_configs@@YA?AV?$vector@V?$vector@IV?$allocator@I@std@@@std@@V?$allocator@V?$vector@IV?$allocator@I@std@@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@H@Z</DECORATED>
+    <FUNCLINE>12</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>64</LINE>
+      <COLUMN>37</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>make_configs</FUNCTION>
+    <DECORATED>?make_configs@@YA?AV?$vector@V?$vector@IV?$allocator@I@std@@@std@@V?$allocator@V?$vector@IV?$allocator@I@std@@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@H@Z</DECORATED>
+    <FUNCLINE>12</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>86</LINE>
+      <COLUMN>21</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>make_configs</FUNCTION>
+    <DECORATED>?make_configs@@YA?AV?$vector@V?$vector@IV?$allocator@I@std@@@std@@V?$allocator@V?$vector@IV?$allocator@I@std@@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@H@Z</DECORATED>
+    <FUNCLINE>12</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>86</LINE>
+      <COLUMN>43</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>make_configs</FUNCTION>
+    <DECORATED>?make_configs@@YA?AV?$vector@V?$vector@IV?$allocator@I@std@@@std@@V?$allocator@V?$vector@IV?$allocator@I@std@@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@H@Z</DECORATED>
+    <FUNCLINE>12</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>166</LINE>
+      <COLUMN>28</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>find_hats</FUNCTION>
+    <DECORATED>?find_hats@@YA?AV?$vector@IV?$allocator@I@std@@@std@@IV12@@Z</DECORATED>
+    <FUNCLINE>163</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>185</LINE>
+      <COLUMN>34</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>find_hats_grid</FUNCTION>
+    <DECORATED>?find_hats_grid@@YA?AV?$vector@IV?$allocator@I@std@@@std@@V12@@Z</DECORATED>
+    <FUNCLINE>179</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>189</LINE>
+      <COLUMN>34</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>find_hats_grid</FUNCTION>
+    <DECORATED>?find_hats_grid@@YA?AV?$vector@IV?$allocator@I@std@@@std@@V12@@Z</DECORATED>
+    <FUNCLINE>179</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>287</LINE>
+      <COLUMN>69</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>check_config_rev</FUNCTION>
+    <DECORATED>?check_config_rev@@YA?AV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@00I@Z</DECORATED>
+    <FUNCLINE>271</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>289</LINE>
+      <COLUMN>18</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>check_config_rev</FUNCTION>
+    <DECORATED>?check_config_rev@@YA?AV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@00I@Z</DECORATED>
+    <FUNCLINE>271</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>290</LINE>
+      <COLUMN>18</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>check_config_rev</FUNCTION>
+    <DECORATED>?check_config_rev@@YA?AV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@00I@Z</DECORATED>
+    <FUNCLINE>271</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>292</LINE>
+      <COLUMN>22</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>check_config_rev</FUNCTION>
+    <DECORATED>?check_config_rev@@YA?AV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@00I@Z</DECORATED>
+    <FUNCLINE>271</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>295</LINE>
+      <COLUMN>22</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>check_config_rev</FUNCTION>
+    <DECORATED>?check_config_rev@@YA?AV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@00I@Z</DECORATED>
+    <FUNCLINE>271</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>295</LINE>
+      <COLUMN>39</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>check_config_rev</FUNCTION>
+    <DECORATED>?check_config_rev@@YA?AV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@00I@Z</DECORATED>
+    <FUNCLINE>271</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>295</LINE>
+      <COLUMN>56</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>check_config_rev</FUNCTION>
+    <DECORATED>?check_config_rev@@YA?AV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@00I@Z</DECORATED>
+    <FUNCLINE>271</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>299</LINE>
+      <COLUMN>33</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>check_config_rev</FUNCTION>
+    <DECORATED>?check_config_rev@@YA?AV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@00I@Z</DECORATED>
+    <FUNCLINE>271</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>299</LINE>
+      <COLUMN>50</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>check_config_rev</FUNCTION>
+    <DECORATED>?check_config_rev@@YA?AV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@00I@Z</DECORATED>
+    <FUNCLINE>271</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>339</LINE>
+      <COLUMN>69</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>check_config</FUNCTION>
+    <DECORATED>?check_config@@YA?AV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@00@Z</DECORATED>
+    <FUNCLINE>327</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>353</LINE>
+      <COLUMN>22</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>check_config</FUNCTION>
+    <DECORATED>?check_config@@YA?AV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@00@Z</DECORATED>
+    <FUNCLINE>327</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>354</LINE>
+      <COLUMN>22</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>check_config</FUNCTION>
+    <DECORATED>?check_config@@YA?AV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@00@Z</DECORATED>
+    <FUNCLINE>327</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>355</LINE>
+      <COLUMN>22</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>check_config</FUNCTION>
+    <DECORATED>?check_config@@YA?AV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@00@Z</DECORATED>
+    <FUNCLINE>327</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>359</LINE>
+      <COLUMN>22</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>check_config</FUNCTION>
+    <DECORATED>?check_config@@YA?AV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@00@Z</DECORATED>
+    <FUNCLINE>327</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>360</LINE>
+      <COLUMN>22</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>check_config</FUNCTION>
+    <DECORATED>?check_config@@YA?AV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@00@Z</DECORATED>
+    <FUNCLINE>327</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>361</LINE>
+      <COLUMN>22</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>check_config</FUNCTION>
+    <DECORATED>?check_config@@YA?AV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@00@Z</DECORATED>
+    <FUNCLINE>327</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>361</LINE>
+      <COLUMN>39</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>check_config</FUNCTION>
+    <DECORATED>?check_config@@YA?AV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@00@Z</DECORATED>
+    <FUNCLINE>327</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>361</LINE>
+      <COLUMN>56</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>check_config</FUNCTION>
+    <DECORATED>?check_config@@YA?AV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@00@Z</DECORATED>
+    <FUNCLINE>327</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>414</LINE>
+      <COLUMN>47</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>check_config_spl</FUNCTION>
+    <DECORATED>?check_config_spl@@YA?AV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@00@Z</DECORATED>
+    <FUNCLINE>390</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>428</LINE>
+      <COLUMN>55</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>check_config_spl</FUNCTION>
+    <DECORATED>?check_config_spl@@YA?AV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@00@Z</DECORATED>
+    <FUNCLINE>390</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>428</LINE>
+      <COLUMN>80</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>check_config_spl</FUNCTION>
+    <DECORATED>?check_config_spl@@YA?AV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@00@Z</DECORATED>
+    <FUNCLINE>390</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>440</LINE>
+      <COLUMN>40</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>check_config_spl</FUNCTION>
+    <DECORATED>?check_config_spl@@YA?AV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@00@Z</DECORATED>
+    <FUNCLINE>390</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>440</LINE>
+      <COLUMN>64</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>check_config_spl</FUNCTION>
+    <DECORATED>?check_config_spl@@YA?AV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@00@Z</DECORATED>
+    <FUNCLINE>390</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>463</LINE>
+      <COLUMN>10</COLUMN>
+    </SFA>
+    <DEFECTCODE>6328</DEFECTCODE>
+    <DESCRIPTION>Size mismatch: 'unsigned __int64' passed as _Param_(2) when 'int' is required in call to 'printf'. </DESCRIPTION>
+    <FUNCTION>stall_search</FUNCTION>
+    <DECORATED>?stall_search@@YA?AV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@V?$vector@V?$vector@IV?$allocator@I@std@@@std@@V?$allocator@V?$vector@IV?$allocator@I@std@@@std@@@2@@2@@Z</DECORATED>
+    <FUNCLINE>460</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>481</LINE>
+      <COLUMN>12</COLUMN>
+    </SFA>
+    <DEFECTCODE>6993</DEFECTCODE>
+    <DESCRIPTION>Code analysis ignores OpenMP constructs; analyzing single-threaded code.</DESCRIPTION>
+    <FUNCTION></FUNCTION>
+    <DECORATED></DECORATED>
+    <FUNCLINE>0</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>480</LINE>
+      <COLUMN>10</COLUMN>
+    </SFA>
+    <DEFECTCODE>6328</DEFECTCODE>
+    <DESCRIPTION>Size mismatch: 'unsigned __int64' passed as _Param_(2) when 'int' is required in call to 'printf'. </DESCRIPTION>
+    <FUNCTION>stall_search_par</FUNCTION>
+    <DECORATED>?stall_search_par@@YA?AV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@V?$vector@V?$vector@IV?$allocator@I@std@@@std@@V?$allocator@V?$vector@IV?$allocator@I@std@@@std@@@2@@2@@Z</DECORATED>
+    <FUNCLINE>477</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>499</LINE>
+      <COLUMN>33</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>print_grids</FUNCTION>
+    <DECORATED>?print_grids@@YAXV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@@Z</DECORATED>
+    <FUNCLINE>497</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>503</LINE>
+      <COLUMN>27</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>print_grids</FUNCTION>
+    <DECORATED>?print_grids@@YAXV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@@Z</DECORATED>
+    <FUNCLINE>497</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>513</LINE>
+      <COLUMN>46</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>print_grids</FUNCTION>
+    <DECORATED>?print_grids@@YAXV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@@Z</DECORATED>
+    <FUNCLINE>497</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\</FILEPATH>
+      <FILENAME>stall_searching.cpp</FILENAME>
+      <LINE>513</LINE>
+      <COLUMN>37</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>print_grids</FUNCTION>
+    <DECORATED>?print_grids@@YAXV?$vector@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@V?$allocator@V?$unordered_set@IU?$hash@I@std@@U?$equal_to@I@2@V?$allocator@I@2@@std@@@2@@std@@V?$vector@IV?$allocator@I@std@@@2@@Z</DECORATED>
+    <FUNCLINE>497</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>
