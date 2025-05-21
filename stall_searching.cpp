@@ -9,31 +9,44 @@
 
 using namespace std;
 
+/*
+*  Create all possible column configurations and filter based on fast conditions before storage.
+*  A "config" is a vector of 'n' unsigned integers representing how many vertices in each column is unfilled.
+*  Filters out configurations with incorrect number of filled vertices, fail basic column sum tests, or are reverses of existing configurations.
+*/
 vector<vector<unsigned>> make_configs(const vector<unsigned> dim, const int filled) {
     const int m = dim[0];
     const int n = dim[1];
     vector<vector<unsigned>> out = vector<vector<unsigned>>();
-    unsigned long long int total_configs = pow(m, n);
+    // Each column can have up to m filled vertices, leading to m + 1 ^ n possible options for the entire graph
+    unsigned long long int total_configs = pow(m+1, n);
     for (unsigned long long int i = 0; i < total_configs; i++) { //TODO parallelize this, but theres a race condition for checking reverses
         int config_sum = 0;
         vector<unsigned> config = vector<unsigned>(n);
-        //fast to check conditions
-        if (i % m == 0 || (int)floor(i / pow(m, n - 1)) % m == 0) {
+        // Check whether the end columns are filled
+        if (i % (m+1) == 0 || (int)floor(i / pow(m+1, n - 1)) % (m+1) == 0) {
             continue;
         }
 
-        //create the config
+
         bool flag = false;
+        // The last column with 0 unfilled
         int last_zero = 0;
         int one_counter = 0;
+        //create the config
         for (int j = 0; j < n; j++) {
-            config[j] = (int)floor(i / pow(m, j)) % m;
+            // Calculate how many unfilled in the jth column
+            config[j] = (int)floor(i / pow(m+1, j)) % (m+1);
             config_sum += config[j];
 
+            // If we have too many unfilled, continue
             if (config_sum > m * n - filled) {
                 flag = true;
                 break;
             }
+
+            // If the second (or second to last) column is full, the first column cannot force as a path. Special case of column splitting.
+            // If I add dynamic solutions, I can expland this to help solve general grid splitting problems
             if (j > 0) {
                 if (config[1] == 0 && config[0] < ceil((float)(m + 1) / 2)) {
                     flag = true;
@@ -41,6 +54,8 @@ vector<vector<unsigned>> make_configs(const vector<unsigned> dim, const int fill
                 }
             }
 
+            // If the last column had no unfilled vertices, this column must have the same number of unfilled vertices as the column opposite the fully filled column.
+            // In general, it must also have the same rows unfilled as the column opposite, but we can't check that now.
             if (j > 1 && last_zero == j - 1 &&
                 config[j - 2] != config[j]) {
                 flag = true;
@@ -48,6 +63,9 @@ vector<vector<unsigned>> make_configs(const vector<unsigned> dim, const int fill
             }
 
             if (config[j] == 0) {
+                // This condition is a bit odd. Consider a sequence of columns with only one vertex unfilled sandwiched between two filled columns.
+                // If the number of columns is less than m, then that block does not stall.
+                // This can be removed in a dynamic solution algorithm since this block would have more vertices than a maximum FZF set.
                 if (one_counter < m) {
                     flag = true;
                     break;
@@ -55,11 +73,13 @@ vector<vector<unsigned>> make_configs(const vector<unsigned> dim, const int fill
                 one_counter = 0;
 
                 if (j > 1) {
+                    // 2 adjacent filled columns fill a grid xd
                     if (last_zero == j - 1) {
                         flag = true;
                         break;
                     }
-
+                    
+                    // More grid splitting xd.
                     if (j > 2) {
                         if (config[j - 1] < ceil((float)(m + 1) / 2) &&
                             last_zero == j - 2) {
@@ -93,6 +113,7 @@ vector<vector<unsigned>> make_configs(const vector<unsigned> dim, const int fill
             continue;
         }
 
+        // Check if a reversed copy of the column configuration is already stalling.
         vector<unsigned> rev(n); //maybe do this at the end to remove race condition
         reverse_copy(config.begin(), config.end(), rev.begin());
         if (out.size() == 0 || find(out.begin(), out.end(), rev) == out.end()) {
@@ -102,13 +123,17 @@ vector<vector<unsigned>> make_configs(const vector<unsigned> dim, const int fill
     return out;
 
 }
-
+/* 
+* Returns the first neighborhood indices of a particular index as a vector, with the first element being the original index. 
+* All neighborhoods must be length 5 for the stall checking algorithm.
+* Indices are COLUMN MAJOR!!!!
+*/
 vector<unsigned> find_nb(const unsigned index, const vector<unsigned> dim) {
     const int m = dim[0];
     const int n = dim[1];
     vector<unsigned> nb;
 
-
+    // Path special case.
     if (n == 1) {
         if (index == 1) {
             nb = { index, index + 1, 0, 0, 0 };
@@ -122,7 +147,7 @@ vector<unsigned> find_nb(const unsigned index, const vector<unsigned> dim) {
 
         return nb;
     }
-
+    // Top row
     if (index % m == 1) {
         if (index <= m) {
             nb = { index, index + 1, index + m, 0, 0 };
@@ -134,7 +159,7 @@ vector<unsigned> find_nb(const unsigned index, const vector<unsigned> dim) {
             nb = { index, index + 1, index - m, index + m, 0 };
         }
     }
-    else if (index % m == 0) {
+    else if (index % m == 0) { // Bottom row
         if (index <= m) {
             nb = { index, index - 1, index + m, 0, 0 };
         }
@@ -146,10 +171,10 @@ vector<unsigned> find_nb(const unsigned index, const vector<unsigned> dim) {
         }
     }
     else {
-        if (index <= m) {
+        if (index <= m) { // First column
             nb = { index, index - 1, index + 1, index + m, 0 };
         }
-        else if (index > (n * m - m)) {
+        else if (index > (n * m - m)) { // Lasr column
             nb = { index, index - 1, index + 1, index - m, 0 };
         }
         else {
@@ -160,6 +185,11 @@ vector<unsigned> find_nb(const unsigned index, const vector<unsigned> dim) {
     return nb;
 }
 
+/*
+* Returns the hat (second neighborhood) indices for a given index.
+* Because we assume there are more filled vertices than unfilled, 
+* checking the hats for the unfilled vertices is WAY faster than checking the forcing condition for all filled vertices.
+*/
 vector<unsigned> find_hats(const unsigned index, const vector<unsigned> dim) {
     vector<unsigned> ind_nb = find_nb(index, dim);
     unsigned num_neighbors = std::count_if(ind_nb.begin() + 1, ind_nb.end(), [](unsigned i) {return i > 0; });
@@ -176,6 +206,10 @@ vector<unsigned> find_hats(const unsigned index, const vector<unsigned> dim) {
     return hats;
 }
 
+/*
+* Find the second neighborhoods for the entire grid.
+* Precalculating all of these since it gets checked millions of times.
+*/
 vector<unsigned> find_hats_grid(const vector<unsigned> dim) {
     const unsigned m = dim[0];
     const unsigned n = dim[1];
@@ -201,7 +235,12 @@ vector<unsigned> find_hats_grid(const vector<unsigned> dim) {
     return hats;
 }
 
-
+/*
+* Checks whether a collection of zeroes stalls the grid according to the hats for the mxn grid.
+* Any optimization to this function has large consequences since this is run many many times.
+* Coming back, we can probably store the zeroes as a list and check the respective index since the hat vector is stored in order.
+* Right now, we iterate over all of the indices and check whether its a 0 or a 1 iteratively.
+*/
 bool stall_check(unordered_set<unsigned> zeroes, vector<unsigned> hats) {
     vector<unsigned>::iterator i = hats.begin();
     while (i != hats.end()) {
@@ -248,9 +287,8 @@ int nCk(int n, int k)
 }
 
 
-//from rosetta code
+//from rosetta code. idk how this works ngl.
 vector<vector<unsigned>> find_combn(const int N, const int K, const int c, const vector<unsigned> dim) {
-    const size_t size = nCk(N, K);
     vector<vector<unsigned>> combs(nCk(N, K));
     string bitmask(K, 1);
     bitmask.resize(N, 0);
@@ -272,6 +310,9 @@ vector<vector<unsigned>> find_combn(const int N, const int K, const int c, const
     return combs;
 }
 
+/*
+* Finds all stalled grids of a specific column configuration.
+*/
 vector<unordered_set<unsigned>> check_config_rev(const vector<unsigned> config,
     const vector<unsigned> dim,
     const vector<unsigned> hats,
@@ -288,6 +329,7 @@ vector<unordered_set<unsigned>> check_config_rev(const vector<unsigned> config,
     ;
     //create indices
     for (int c = 1; c <= n; c++) {
+        // All ways to choose which indices in the column are zeroes
         vector<vector<unsigned>> colIndices = find_combn(m, config[c - 1], c + (last_zero + 1), dim);
 
         options[c - 1] = colIndices;
@@ -541,10 +583,12 @@ int main()
     printf("\n");
     const vector<unsigned> dim = { m,n };
     omp_set_num_threads(t);
-    vector<vector<unsigned>> cols = make_configs(dim, filled);
+
 
     clock_t start = clock();
     auto t_start = std::chrono::high_resolution_clock::now();
+
+    vector<vector<unsigned>> cols = make_configs(dim, filled);
 
 
     vector<unordered_set<unsigned>> stalls = stall_search_par(dim, cols);
@@ -566,11 +610,3 @@ int main()
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file

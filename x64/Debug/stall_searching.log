@@ -1,45 +1,44 @@
 ﻿  stall_searching.cpp
-C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\stall_searching.cpp(16,42): warning C4244: 'initializing': conversion from 'double' to 'unsigned __int64', possible loss of data
-C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\stall_searching.cpp(127,19): warning C4018: '<=': signed/unsigned mismatch
-C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\stall_searching.cpp(130,24): warning C4018: '>': signed/unsigned mismatch
-C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\stall_searching.cpp(138,19): warning C4018: '<=': signed/unsigned mismatch
-C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\stall_searching.cpp(141,24): warning C4018: '>': signed/unsigned mismatch
-C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\stall_searching.cpp(149,19): warning C4018: '<=': signed/unsigned mismatch
-C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\stall_searching.cpp(152,24): warning C4018: '>': signed/unsigned mismatch
-C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\stall_searching.cpp(165,28): warning C4244: 'initializing': conversion from '__int64' to 'unsigned int', possible loss of data
-C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\stall_searching.cpp(195,32): warning C4244: 'initializing': conversion from '__int64' to 'unsigned int', possible loss of data
-C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\stall_searching.cpp(258,32): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\stall_searching.cpp(290,43): warning C4267: '=': conversion from 'size_t' to '_Ty', possible loss of data
+C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\stall_searching.cpp(22,42): warning C4244: 'initializing': conversion from 'double' to 'unsigned __int64', possible loss of data
+C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\stall_searching.cpp(152,19): warning C4018: '<=': signed/unsigned mismatch
+C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\stall_searching.cpp(155,24): warning C4018: '>': signed/unsigned mismatch
+C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\stall_searching.cpp(163,19): warning C4018: '<=': signed/unsigned mismatch
+C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\stall_searching.cpp(166,24): warning C4018: '>': signed/unsigned mismatch
+C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\stall_searching.cpp(174,19): warning C4018: '<=': signed/unsigned mismatch
+C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\stall_searching.cpp(177,24): warning C4018: '>': signed/unsigned mismatch
+C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\stall_searching.cpp(195,28): warning C4244: 'initializing': conversion from '__int64' to 'unsigned int', possible loss of data
+C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\stall_searching.cpp(229,32): warning C4244: 'initializing': conversion from '__int64' to 'unsigned int', possible loss of data
+C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\stall_searching.cpp(300,32): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\stall_searching.cpp(336,43): warning C4267: '=': conversion from 'size_t' to '_Ty', possible loss of data
           with
           [
               _Ty=unsigned int
           ]
-C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\stall_searching.cpp(320,25): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\stall_searching.cpp(347,35): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\stall_searching.cpp(359,49): warning C4267: '=': conversion from 'size_t' to '_Ty', possible loss of data
+C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\stall_searching.cpp(365,25): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\stall_searching.cpp(387,35): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\stall_searching.cpp(400,49): warning C4267: '=': conversion from 'size_t' to '_Ty', possible loss of data
           with
           [
               _Ty=int
           ]
-C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\stall_searching.cpp(365,47): warning C4267: '=': conversion from 'size_t' to '_Ty', possible loss of data
+C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\stall_searching.cpp(406,47): warning C4267: '=': conversion from 'size_t' to '_Ty', possible loss of data
           with
           [
               _Ty=int
           ]
-C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\stall_searching.cpp(339,9): warning C4101: 'index': unreferenced local variable
-C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\stall_searching.cpp(401,18): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
-C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\stall_searching.cpp(412,23): warning C4018: '<=': signed/unsigned mismatch
-C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\stall_searching.cpp(425,50): warning C4267: '=': conversion from 'size_t' to '_Ty', possible loss of data
+C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\stall_searching.cpp(444,18): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\stall_searching.cpp(455,23): warning C4018: '<=': signed/unsigned mismatch
+C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\stall_searching.cpp(468,50): warning C4267: '=': conversion from 'size_t' to '_Ty', possible loss of data
           with
           [
               _Ty=unsigned int
           ]
-C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\stall_searching.cpp(445,28): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\stall_searching.cpp(466,12): warning C4477: 'printf' : format string '%u' requires an argument of type 'unsigned int', but variadic argument 1 has type 'unsigned __int64'
-C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\stall_searching.cpp(466,12): message : consider using '%zu' in the format string
-C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\stall_searching.cpp(483,12): warning C4477: 'printf' : format string '%u' requires an argument of type 'unsigned int', but variadic argument 1 has type 'unsigned __int64'
-C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\stall_searching.cpp(483,12): message : consider using '%zu' in the format string
-C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\stall_searching.cpp(501,34): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\stall_searching.cpp(514,27): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\stall_searching.cpp(515,31): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\stall_searching.cpp(488,28): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\stall_searching.cpp(509,12): warning C4477: 'printf' : format string '%u' requires an argument of type 'unsigned int', but variadic argument 1 has type 'unsigned __int64'
+C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\stall_searching.cpp(509,12): message : consider using '%zu' in the format string
+C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\stall_searching.cpp(526,12): warning C4477: 'printf' : format string '%u' requires an argument of type 'unsigned int', but variadic argument 1 has type 'unsigned __int64'
+C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\stall_searching.cpp(526,12): message : consider using '%zu' in the format string
+C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\stall_searching.cpp(544,34): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\stall_searching.cpp(557,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\stall_searching.cpp(558,31): warning C4018: '<': signed/unsigned mismatch
   stall_searching.vcxproj -> C:\Users\Sean Sorek HP Laptop\Documents\FZF_Grid_BruteForce\x64\Debug\stall_searching.exe
