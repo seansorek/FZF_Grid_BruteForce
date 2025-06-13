@@ -1,0 +1,5 @@
+﻿  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 878 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  stall_searching.vcxproj -> C:\Users\sssor\Documents\FZF_Grid_BruteForce\x64\Release\stall_searching.exe

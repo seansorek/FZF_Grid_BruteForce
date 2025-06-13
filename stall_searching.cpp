@@ -123,6 +123,7 @@ vector<vector<unsigned>> make_configs(const vector<unsigned> dim, const int fill
     return out;
 
 }
+
 /* 
 * Returns the first neighborhood indices of a particular index as a vector, with the first element being the original index. 
 * All neighborhoods must be length 5 for the stall checking algorithm.
@@ -174,7 +175,7 @@ vector<unsigned> find_nb(const unsigned index, const vector<unsigned> dim) {
         if (index <= m) { // First column
             nb = { index, index - 1, index + 1, index + m, 0 };
         }
-        else if (index > (n * m - m)) { // Lasr column
+        else if (index > (n * m - m)) { // Last column
             nb = { index, index - 1, index + 1, index - m, 0 };
         }
         else {
