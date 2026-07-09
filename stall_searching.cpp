@@ -5,6 +5,8 @@
 #include <iostream>
 #include <string>
 #include <unordered_set>
+#include <set>
+#include <atomic>
 #include <omp.h>
 
 using namespace std;
@@ -14,20 +16,38 @@ using namespace std;
 *  A "config" is a vector of 'n' unsigned integers representing how many vertices in each column is unfilled.
 *  Filters out configurations with incorrect number of filled vertices, fail basic column sum tests, or are reverses of existing configurations.
 */
-vector<vector<unsigned>> make_configs(const vector<unsigned> dim, const int filled) {
+vector<vector<unsigned>> make_configs(const vector<unsigned>& dim, const int filled) {
     const int m = dim[0];
     const int n = dim[1];
-    vector<vector<unsigned>> out = vector<vector<unsigned>>();
+    vector<vector<unsigned>> out;
+
+    // Precompute powers of (m+1) once so the mixed-radix digit decomposition
+    // below is plain integer division instead of pow()/floor() every
+    // iteration (floating point pow() also silently loses precision once
+    // total_configs exceeds 2^53).
+    vector<unsigned long long> pow_table(n + 1);
+    pow_table[0] = 1;
+    for (int j = 1; j <= n; j++) {
+        pow_table[j] = pow_table[j - 1] * (unsigned long long)(m + 1);
+    }
     // Each column can have up to m filled vertices, leading to m + 1 ^ n possible options for the entire graph
-    unsigned long long int total_configs = pow(m+1, n);
-    for (unsigned long long int i = 0; i < total_configs; i++) { //TODO parallelize this, but theres a race condition for checking reverses
+    unsigned long long total_configs = pow_table[n];
+
+    // Mirrors the contents of `out` so the "is my reverse already accepted"
+    // check below is O(log |out|) instead of the O(|out|) linear scan it
+    // replaces -- the original made this function O(|out|^2) overall.
+    set<vector<unsigned>> seen;
+
+    for (unsigned long long i = 0; i < total_configs; i++) {
+        //TODO parallelize this -- the reverse-dedup below is now a hash/tree lookup (seen), so the former
+        // concern about scanning `out` is gone, but accept/reject still needs to be serialized against
+        // `seen`/`out` (e.g. a critical section, or per-thread buffers merged and re-deduped at the end).
         int config_sum = 0;
-        vector<unsigned> config = vector<unsigned>(n);
+        vector<unsigned> config(n);
         // Check whether the end columns are filled
-        if (i % (m+1) == 0 || (int)floor(i / pow(m+1, n - 1)) % (m+1) == 0) {
+        if (i % (m + 1) == 0 || (i / pow_table[n - 1]) % (m + 1) == 0) {
             continue;
         }
-
 
         bool flag = false;
         // The last column with 0 unfilled
@@ -36,7 +56,7 @@ vector<vector<unsigned>> make_configs(const vector<unsigned> dim, const int fill
         //create the config
         for (int j = 0; j < n; j++) {
             // Calculate how many unfilled in the jth column
-            config[j] = (int)floor(i / pow(m+1, j)) % (m+1);
+            config[j] = (unsigned)((i / pow_table[j]) % (m + 1));
             config_sum += config[j];
 
             // If we have too many unfilled, continue
@@ -78,7 +98,7 @@ vector<vector<unsigned>> make_configs(const vector<unsigned> dim, const int fill
                         flag = true;
                         break;
                     }
-                    
+
                     // More grid splitting xd.
                     if (j > 2) {
                         if (config[j - 1] < ceil((float)(m + 1) / 2) &&
@@ -107,29 +127,29 @@ vector<vector<unsigned>> make_configs(const vector<unsigned> dim, const int fill
             continue;
         }
 
-
         //check sum of config
         if (config_sum < m * n - filled) {
             continue;
         }
 
         // Check if a reversed copy of the column configuration is already stalling.
-        vector<unsigned> rev(n); //maybe do this at the end to remove race condition
+        vector<unsigned> rev(n);
         reverse_copy(config.begin(), config.end(), rev.begin());
-        if (out.size() == 0 || find(out.begin(), out.end(), rev) == out.end()) {
+        if (seen.find(rev) == seen.end()) {
             out.push_back(config);
+            seen.insert(config);
         }
     }
     return out;
 
 }
 
-/* 
-* Returns the first neighborhood indices of a particular index as a vector, with the first element being the original index. 
+/*
+* Returns the first neighborhood indices of a particular index as a vector, with the first element being the original index.
 * All neighborhoods must be length 5 for the stall checking algorithm.
 * Indices are COLUMN MAJOR!!!!
 */
-vector<unsigned> find_nb(const unsigned index, const vector<unsigned> dim) {
+vector<unsigned> find_nb(const unsigned index, const vector<unsigned>& dim) {
     const int m = dim[0];
     const int n = dim[1];
     vector<unsigned> nb;
@@ -188,10 +208,10 @@ vector<unsigned> find_nb(const unsigned index, const vector<unsigned> dim) {
 
 /*
 * Returns the hat (second neighborhood) indices for a given index.
-* Because we assume there are more filled vertices than unfilled, 
+* Because we assume there are more filled vertices than unfilled,
 * checking the hats for the unfilled vertices is WAY faster than checking the forcing condition for all filled vertices.
 */
-vector<unsigned> find_hats(const unsigned index, const vector<unsigned> dim) {
+vector<unsigned> find_hats(const unsigned index, const vector<unsigned>& dim) {
     vector<unsigned> ind_nb = find_nb(index, dim);
     unsigned num_neighbors = std::count_if(ind_nb.begin() + 1, ind_nb.end(), [](unsigned i) {return i > 0; });
     vector<unsigned> hats(5 * num_neighbors);
@@ -211,7 +231,7 @@ vector<unsigned> find_hats(const unsigned index, const vector<unsigned> dim) {
 * Find the second neighborhoods for the entire grid.
 * Precalculating all of these since it gets checked millions of times.
 */
-vector<unsigned> find_hats_grid(const vector<unsigned> dim) {
+vector<unsigned> find_hats_grid(const vector<unsigned>& dim) {
     const unsigned m = dim[0];
     const unsigned n = dim[1];
 
@@ -237,19 +257,33 @@ vector<unsigned> find_hats_grid(const vector<unsigned> dim) {
 }
 
 /*
+* Precomputes find_hats_grid for every possible sub-grid column count (1..n) once per run.
+* check_config_spl needs the hats for shape {m, subcols} for whatever subcols a column split
+* produces, and the same shapes recur across many configs -- build the table once instead of
+* recomputing it from scratch for every config that happens to split the same way.
+*/
+vector<vector<unsigned>> precompute_subcol_hats(const unsigned m, const unsigned n) {
+    vector<vector<unsigned>> table(n + 1);
+    for (unsigned subcols = 1; subcols <= n; subcols++) {
+        table[subcols] = find_hats_grid({ m, subcols });
+    }
+    return table;
+}
+
+/*
 * Checks whether a collection of zeroes stalls the grid according to the hats for the mxn grid.
 * Any optimization to this function has large consequences since this is run many many times.
 * Coming back, we can probably store the zeroes as a list and check the respective index since the hat vector is stored in order.
 * Right now, we iterate over all of the indices and check whether its a 0 or a 1 iteratively.
 */
-bool stall_check(unordered_set<unsigned> zeroes, vector<unsigned> hats) {
-    vector<unsigned>::iterator i = hats.begin();
+bool stall_check(const unordered_set<unsigned>& zeroes, const vector<unsigned>& hats) {
+    vector<unsigned>::const_iterator i = hats.begin();
     while (i != hats.end()) {
         // if there is a 1 at the index, move onto the next index
         if (!zeroes.contains(*i)) { advance(i, 5); continue; }
 
         // *i == 0, each iteration is ONE hat
-        vector<unsigned>::iterator next_check = next(i, 5);
+        vector<unsigned>::const_iterator next_check = next(i, 5);
         bool flag = false;
         ++i;
 
@@ -272,52 +306,77 @@ bool stall_check(unordered_set<unsigned> zeroes, vector<unsigned> hats) {
     return true;
 }
 
-int fact(int n)
+// Overflow-safe iterative binomial coefficient (the previous fact()-based version overflowed
+// 32-bit int around n=13, silently corrupting anything sized from it).
+unsigned long long nCk(int n, int k)
 {
-    if (n == 0)
-        return 1;
-    int res = 1;
-    for (int i = 2; i <= n; i++)
-        res = res * i;
-    return res;
+    if (k < 0 || k > n) return 0;
+    k = min(k, n - k);
+    unsigned long long result = 1;
+    for (int i = 0; i < k; i++) {
+        result = result * (unsigned long long)(n - i) / (unsigned long long)(i + 1);
+    }
+    return result;
 }
 
-int nCk(int n, int k)
-{
-    return fact(n) / (fact(k) * fact(n - k));
-}
-
-
-//from rosetta code. idk how this works ngl.
-vector<vector<unsigned>> find_combn(const int N, const int K, const int c, const vector<unsigned> dim) {
-    vector<vector<unsigned>> combs(nCk(N, K));
-    string bitmask(K, 1);
-    bitmask.resize(N, 0);
-    int j = 0;
-    auto it = combs.begin();
-    do {
-        vector<unsigned> comb = vector<unsigned>(K);
-        int k = 0;
-        for (unsigned i = 0; i < N; ++i) {
-            if (bitmask[i]) {
-                comb[k] = i + 1 + (c - 1) * dim[0];
-                ++k;
+/*
+* Precomputes, for every possible per-column unfilled count k (0..m), the set of k-subsets of a
+* single column's m rows -- expressed as row indices (1..m) with no column offset applied.
+* Every config/column that needs k unfilled rows reuses this table via a cheap offset add
+* (see offset_combo) instead of re-deriving the same combinatorics with prev_permutation from
+* scratch for every column of every config.
+*/
+vector<vector<vector<unsigned>>> precompute_base_combos(const unsigned m) {
+    vector<vector<vector<unsigned>>> table(m + 1);
+    for (unsigned k = 0; k <= m; k++) {
+        vector<vector<unsigned>> combos((size_t)nCk((int)m, (int)k));
+        string bitmask(k, 1);
+        bitmask.resize(m, 0);
+        auto it = combos.begin();
+        do {
+            vector<unsigned> comb(k);
+            unsigned c = 0;
+            for (unsigned bi = 0; bi < m; ++bi) {
+                if (bitmask[bi]) {
+                    comb[c] = bi + 1;
+                    ++c;
+                }
             }
+            *it = comb;
+            ++it;
+        } while (std::prev_permutation(bitmask.begin(), bitmask.end()));
+        table[k] = move(combos);
+    }
+    return table;
+}
 
-        }
-        *it = comb;
-        ++it;
-    } while (std::prev_permutation(bitmask.begin(), bitmask.end()));
-    return combs;
+// Applies a column offset (in whole columns, i.e. rows-per-column units) to a cached base combo.
+inline vector<unsigned> offset_combo(const vector<unsigned>& base, const unsigned col_offset_rows) {
+    vector<unsigned> out(base.size());
+    for (size_t i = 0; i < base.size(); i++) {
+        out[i] = base[i] + col_offset_rows;
+    }
+    return out;
+}
+
+vector<unsigned> create_reverse(const vector<unsigned>& combn, const vector<unsigned>& dim) {
+    int n = combn.size();
+    vector<unsigned> out(n);
+    for (int i = 0; i < n; i++) {
+        out[i] = (dim[0] + 1) - combn[i];
+    }
+    sort(out.begin(), out.end());
+    return out;
 }
 
 /*
 * Finds all stalled grids of a specific column configuration.
 */
-vector<unordered_set<unsigned>> check_config_rev(const vector<unsigned> config,
-    const vector<unsigned> dim,
-    const vector<unsigned> hats,
-    const unsigned last_zero) {
+vector<unordered_set<unsigned>> check_config_rev(const vector<unsigned>& config,
+    const vector<unsigned>& dim,
+    const vector<unsigned>& hats,
+    const unsigned last_zero,
+    const vector<vector<vector<unsigned>>>& base_combos) {
     const int m = dim[0];
     const int n = dim[1];
 
@@ -327,14 +386,20 @@ vector<unordered_set<unsigned>> check_config_rev(const vector<unsigned> config,
     int out_length = accumulate(config.begin(), config.end(), 0);
 
     vector<unordered_set<unsigned>> stallout;
-    ;
     //create indices
     for (int c = 1; c <= n; c++) {
         // All ways to choose which indices in the column are zeroes
-        vector<vector<unsigned>> colIndices = find_combn(m, config[c - 1], c + (last_zero + 1), dim);
+        const vector<vector<unsigned>>& base = base_combos[config[c - 1]];
+        unsigned col_offset_rows = (unsigned)(c + (int)last_zero) * (unsigned)m;
 
-        options[c - 1] = colIndices;
-        lengths[c - 1] = colIndices.size();
+        vector<vector<unsigned>> colIndices;
+        colIndices.reserve(base.size());
+        for (const auto& relCombo : base) {
+            colIndices.push_back(offset_combo(relCombo, col_offset_rows));
+        }
+
+        options[c - 1] = move(colIndices);
+        lengths[c - 1] = options[c - 1].size();
         if (c == 1) {
             factors[c - 1] = 1;
         }
@@ -345,11 +410,12 @@ vector<unordered_set<unsigned>> check_config_rev(const vector<unsigned> config,
 
     int total_length = factors[n - 1] * lengths[n - 1];
 
+    unordered_set<unsigned> zeroes;
+    zeroes.reserve(out_length);
     for (int i = 0; i < total_length; i++) {
-        unordered_set<unsigned> zeroes(out_length);
-        int zero_index = 0;
+        zeroes.clear();
         for (int k = 0; k < n; k++) {
-            vector<unsigned> option = options[k][i / factors[k] % lengths[k]];
+            const vector<unsigned>& option = options[k][i / factors[k] % lengths[k]];
             zeroes.insert(option.begin(), option.end());
         }
 
@@ -362,16 +428,8 @@ vector<unordered_set<unsigned>> check_config_rev(const vector<unsigned> config,
     return stallout;
 }
 
-vector<unsigned> create_reverse(const vector<unsigned> combn, const vector<unsigned> dim) {
-    int n = combn.size();
-    vector<unsigned> out(n);
-    for (int i = 0; i < n; i++) {
-        out[i] = (dim[0] + 1) - combn[i];
-    }
-    sort(out.begin(), out.end());
-    return out;
-}
-vector<unordered_set<unsigned>> check_config(const vector<unsigned> config, const vector<unsigned> dim, const vector<unsigned> hats) {
+vector<unordered_set<unsigned>> check_config(const vector<unsigned>& config, const vector<unsigned>& dim,
+    const vector<unsigned>& hats, const vector<vector<vector<unsigned>>>& base_combos) {
     const int m = dim[0];
     const int n = dim[1];
 
@@ -383,28 +441,40 @@ vector<unordered_set<unsigned>> check_config(const vector<unsigned> config, cons
     vector<unordered_set<unsigned>> stallout;
     //create indices
     for (int c = 1; c <= n; c++) {
-        vector<vector<unsigned>> colIndices = find_combn(m, config[c - 1], c, dim);
+        const vector<vector<unsigned>>& base = base_combos[config[c - 1]];
 
-        int n_ = colIndices.size();
         if (c == 1) {
-
             // is the reverse in here already?
-            vector<vector<unsigned>> noRevIndices = vector<vector<unsigned>>();
-            noRevIndices.push_back(colIndices[0]);
-            for (int r = 1; r < n_; r++) {
-                if (find(noRevIndices.begin(), noRevIndices.end(), create_reverse(colIndices[r], dim)) == noRevIndices.end()) {
-                    noRevIndices.push_back(colIndices[r]);
+            vector<vector<unsigned>> noRevIndices;
+            set<vector<unsigned>> accepted; // mirrors noRevIndices for an O(log n) membership check
+            for (size_t r = 0; r < base.size(); r++) {
+                vector<unsigned> combo = offset_combo(base[r], 0);
+                if (r == 0) {
+                    noRevIndices.push_back(combo);
+                    accepted.insert(combo);
+                    continue;
+                }
+                vector<unsigned> rev = create_reverse(combo, dim);
+                if (accepted.find(rev) == accepted.end()) {
+                    accepted.insert(combo);
+                    noRevIndices.push_back(move(combo));
                 }
             }
 
-            options[c - 1] = noRevIndices;
-            lengths[c - 1] = noRevIndices.size();
+            options[c - 1] = move(noRevIndices);
+            lengths[c - 1] = options[c - 1].size();
             factors[c - 1] = 1;
 
         }
         else {
-            options[c - 1] = colIndices;
-            lengths[c - 1] = colIndices.size();
+            vector<vector<unsigned>> colIndices;
+            colIndices.reserve(base.size());
+            unsigned col_offset_rows = (unsigned)(c - 1) * (unsigned)m;
+            for (const auto& relCombo : base) {
+                colIndices.push_back(offset_combo(relCombo, col_offset_rows));
+            }
+            options[c - 1] = move(colIndices);
+            lengths[c - 1] = options[c - 1].size();
             factors[c - 1] = lengths[c - 2] * factors[c - 2];
         }
 
@@ -412,15 +482,15 @@ vector<unordered_set<unsigned>> check_config(const vector<unsigned> config, cons
 
     int total_length = factors[dim[1] - 1] * lengths[dim[1] - 1];
 
+    unordered_set<unsigned> zeroes;
+    zeroes.reserve(out_length);
     //iterate over all possible column configurations, check if one stalls
     for (int i = 0; i < total_length; i++) {
-        unordered_set<unsigned> zeroes(out_length); //this is by far the slowest part of the algorithm
-        int zero_index = 0;
+        zeroes.clear();
         for (int k = 0; k < n; k++) {
-            vector<unsigned> option = options[k][i / factors[k] % lengths[k]];
+            const vector<unsigned>& option = options[k][i / factors[k] % lengths[k]];
             zeroes.insert(option.begin(), option.end());
         }
-
 
         if (stall_check(zeroes, hats)) {
             stallout.push_back(zeroes);
@@ -434,9 +504,12 @@ vector<unordered_set<unsigned>> check_config(const vector<unsigned> config, cons
 // this handles the case where the grid can be split into multiple smaller grids.
 // theres a dynamic programming solution for this that's way more elegant
 // this function becomes astronomically slow for small m - large n scenarios but those can be trivially solved by hand
-vector<unordered_set<unsigned>> check_config_spl(const vector<unsigned> config, const vector<unsigned> dim, const vector<unsigned> hats) {
+vector<unordered_set<unsigned>> check_config_spl(const vector<unsigned>& config, const vector<unsigned>& dim,
+    const vector<unsigned>& hats,
+    const vector<vector<unsigned>>& subcol_hats,
+    const vector<vector<vector<unsigned>>>& base_combos) {
     if (find(config.begin(), config.end(), 0) == config.end()) {
-        return check_config(config, dim, hats);
+        return check_config(config, dim, hats, base_combos);
     }
 
     unsigned subcols = 0; //preallocating a lot of values, for minor performance gains
@@ -453,20 +526,20 @@ vector<unordered_set<unsigned>> check_config_spl(const vector<unsigned> config, 
     vector<unordered_set<unsigned>> stallout;
     vector<vector<unordered_set<unsigned>>> sub_stalls(num_subs);
 
-    for (int j = 0; j <= dim[1]; j++) {
-        if (j == dim[1] || config[j] == 0) {
+    for (int j = 0; j <= (int)dim[1]; j++) {
+        if (j == (int)dim[1] || config[j] == 0) {
             vector<unsigned> sub_dim = { dim[0], subcols };
-            vector<unsigned> sub_hats = find_hats_grid(sub_dim);
+            const vector<unsigned>& sub_hats = subcol_hats[subcols];
             vector<unsigned> sub_config = vector<unsigned>(subcols);
             copy_n(config.begin() + (last_zero + 1), subcols, sub_config.begin());
-            vector<unordered_set<unsigned>> sub_stall = check_config_rev(sub_config, sub_dim, sub_hats, last_zero);
+            vector<unordered_set<unsigned>> sub_stall = check_config_rev(sub_config, sub_dim, sub_hats, last_zero, base_combos);
 
             if (sub_stall.size() == 0) {
                 break;
             }
 
-            sub_stalls[which_sub] = sub_stall;
-            lengths[which_sub] = sub_stall.size();
+            sub_stalls[which_sub] = move(sub_stall);
+            lengths[which_sub] = sub_stalls[which_sub].size();
 
             if (which_sub == 0) {
                 factors[which_sub] = 1;
@@ -488,10 +561,9 @@ vector<unordered_set<unsigned>> check_config_spl(const vector<unsigned> config, 
 
     for (unsigned i = 0; i < total_length; i++) {
         zeroes.clear();
-        int zero_index = 0;
         zeroes.reserve(out_length);
         for (int k = 0; k < num_subs; k++) {
-            unordered_set<unsigned> option = sub_stalls[k][i / factors[k] % lengths[k]];
+            const unordered_set<unsigned>& option = sub_stalls[k][i / factors[k] % lengths[k]];
             zeroes.insert(option.begin(), option.end());
         }
 
@@ -504,12 +576,25 @@ vector<unordered_set<unsigned>> check_config_spl(const vector<unsigned> config, 
 
 }
 
-vector<unordered_set<unsigned>> stall_search(const vector<unsigned> dim, vector<vector<unsigned>> configs) {
+// Rough relative cost of enumerating a config's zero placements (product of per-column
+// candidate counts, in log-space to avoid overflow). Used only to order the work queue so
+// the heaviest configs get dispatched first under dynamic scheduling.
+double estimate_config_log_cost(const vector<unsigned>& config, const vector<vector<vector<unsigned>>>& base_combos) {
+    double log_cost = 0.0;
+    for (unsigned k : config) {
+        log_cost += log((double)base_combos[k].size() + 1.0);
+    }
+    return log_cost;
+}
+
+vector<unordered_set<unsigned>> stall_search(const vector<unsigned>& dim, const vector<vector<unsigned>>& configs) {
     vector<unsigned> hats = find_hats_grid(dim);
+    vector<vector<unsigned>> subcol_hats = precompute_subcol_hats(dim[0], dim[1]);
+    vector<vector<vector<unsigned>>> base_combos = precompute_base_combos(dim[0]);
     vector<unordered_set<unsigned>> out;
-    printf("Number of configs: %u \nProgress: ", configs.size());
+    printf("Number of configs: %zu \nProgress: ", configs.size());
     for (auto it = configs.begin(); it != configs.end(); it++) {
-        vector<unordered_set<unsigned>> stalls = check_config_spl(*it, dim, hats);
+        vector<unordered_set<unsigned>> stalls = check_config_spl(*it, dim, hats, subcol_hats, base_combos);
         printf(".");
         if (stalls.size() > 0) {
             for (auto it2 = stalls.begin(); it2 != stalls.end(); it2++) {
@@ -521,32 +606,71 @@ vector<unordered_set<unsigned>> stall_search(const vector<unsigned> dim, vector<
     return out;
 }
 
-vector<unordered_set<unsigned>> stall_search_par(const vector<unsigned> dim, const vector<vector<unsigned>> configs) {
+vector<unordered_set<unsigned>> stall_search_par(const vector<unsigned>& dim, const vector<vector<unsigned>>& configs) {
     vector<unsigned> hats = find_hats_grid(dim);
-    vector<unordered_set<unsigned>> out;
-    printf("Number of configs: %u \nProgress: ", configs.size());
+    vector<vector<unsigned>> subcol_hats = precompute_subcol_hats(dim[0], dim[1]);
+    vector<vector<vector<unsigned>>> base_combos = precompute_base_combos(dim[0]);
+    printf("Number of configs: %zu \nProgress: ", configs.size());
+
+    // Longest-job-first: sort configs by estimated cost before handing them to dynamic
+    // scheduling, so the few very expensive configs don't end up serialized at the tail.
+    vector<int> order(configs.size());
+    iota(order.begin(), order.end(), 0);
+    vector<double> cost(configs.size());
+    for (size_t i = 0; i < configs.size(); i++) {
+        cost[i] = estimate_config_log_cost(configs[i], base_combos);
+    }
+    sort(order.begin(), order.end(), [&](int a, int b) { return cost[a] > cost[b]; });
+
+    // Each thread accumulates into its own slot and results are merged after the parallel
+    // region -- the original called push_back on a single shared vector from every thread,
+    // which is a data race (concurrent reallocation can corrupt the vector for all threads).
+    int num_threads = omp_get_max_threads();
+    vector<vector<unordered_set<unsigned>>> thread_out(num_threads);
+    atomic<size_t> progress_counter(0);
+    size_t total_configs = configs.size();
+
     #pragma omp parallel for schedule(dynamic)
-    for (int i = 0; i < configs.size(); i++) {
-        vector<unordered_set<unsigned>> stalls = check_config_spl(configs[i], dim, hats);
-        printf(".");
-        if (stalls.size() > 0) {
-            for (auto it2 = stalls.begin(); it2 != stalls.end(); it2++) {
-                out.push_back(*it2);
-                printf("!");
+    for (int oi = 0; oi < (int)order.size(); oi++) {
+        int i = order[oi];
+        int tid = omp_get_thread_num();
+        vector<unordered_set<unsigned>> stalls = check_config_spl(configs[i], dim, hats, subcol_hats, base_combos);
+        if (!stalls.empty()) {
+            thread_out[tid].insert(thread_out[tid].end(),
+                make_move_iterator(stalls.begin()), make_move_iterator(stalls.end()));
+        }
+
+        // Progress is reported periodically by whichever thread crosses a multiple of 100,
+        // instead of once per config/stall -- printf takes an internal stdio lock, so calling
+        // it on every single config serialized the threads against each other.
+        size_t done = ++progress_counter;
+        if (done % 100 == 0 || done == total_configs) {
+            #pragma omp critical
+            {
+                printf("\rProgress: %zu/%zu", done, total_configs);
+                fflush(stdout);
             }
         }
+    }
+    printf("\n");
+
+    vector<unordered_set<unsigned>> out;
+    size_t total_out = 0;
+    for (auto& v : thread_out) total_out += v.size();
+    out.reserve(total_out);
+    for (auto& v : thread_out) {
+        out.insert(out.end(), make_move_iterator(v.begin()), make_move_iterator(v.end()));
     }
     return out;
 }
 
 
 
-void print_grids(vector<unordered_set<unsigned>> zeroes, const vector<unsigned> dim) {
+void print_grids(const vector<unordered_set<unsigned>>& zeroes, const vector<unsigned>& dim) {
     int num_grids = zeroes.size();
     vector<unsigned> grid(dim[0] * dim[1], 1);
-    unordered_set<unsigned> option;
     for (int k = 0; k < num_grids; k++) {
-        option = zeroes[k];
+        const unordered_set<unsigned>& option = zeroes[k];
         grid.assign(dim[0] * dim[1], 1);
         printf("Zero Indices: ");
         for (auto i = option.begin(); i != option.end(); i++) {
